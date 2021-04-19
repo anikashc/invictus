@@ -13,7 +13,7 @@
 
 - [About Project](#about-project)
 - [Getting Started](#getting-started)
-- [Contibuting](#contributing)
+- [Contributing](#contributing)
 
 ## About Project
 
@@ -42,7 +42,7 @@ To get started simply:
 6. To run only server : <br>
 `npm run server`
 
-## Contibuting
+## Contributing
 To get started:
 1. Make a new branch on your local repository for every feature you work on<br>
 `git checkout -b <Your name-Feature>`
