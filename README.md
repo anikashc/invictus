@@ -46,7 +46,9 @@ To get started simply:
 To get started:
 1. Make a new branch on your local repository for every feature you work on<br>
 `git checkout -b <Your name-Feature>`
-2. Whatever changes you want to do, always commit to your branch <br>
+2. Whatever changes you want to do, always add then commit to your branch. Make sure your commit message is clear <br>
+`git add .`
+`git commit -m "<your commit message>"`
 3. Pull the changes from master (there may have been merged changes while you were working). It is also a good practice to pull before starting to work. You may get some merge conflicts. Try to see if your code is replacing the existing code and if you are not able to merge conflicts then contact one of the heads.
 `git pull origin master`
 4. After that push to your branch (you won't be able to push to master):<br>
