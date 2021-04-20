@@ -45,6 +45,18 @@ To get started simply:
 
 ## Contributing
 
+So, first add the original repo as a remote upstream in your local forked one:<br>
+
+   `git remote add upstream https://github.com/anikashc/invictus.git`
+
+Now, you can easily syncronize your forked (origin) repository with the upstream one by doing<br>
+
+   `git checkout master` # Make sure you always run the following commands from the master branch
+   `git fetch --all`
+   `git pull --rebase upstream master`
+   `git push origin master`
+
+
 To get started:
 
 1. Make a new branch on your local repository for every feature you work on<br>
