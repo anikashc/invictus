@@ -54,5 +54,7 @@ To get started:
    `git commit -m "<your commit message>"`
 3. Pull the changes from master (there may have been merged changes while you were working). It is also a good practice to pull before starting to work. You may get some merge conflicts. Try to see if your code is replacing the existing code and if you are not able to merge conflicts then contact one of the heads.
    `git pull origin master`
-4. After that push to your branch (you won't be able to push to master):<br>
+4. New packages may have been installed. Run this in both root and client folder:<br>
+   `npm install`
+5. After that push to your branch (you won't be able to push to master):<br>
    `git push -u origin <branch name>`
