@@ -45,6 +45,18 @@ To get started simply:
 
 ## Contributing
 
+So, first add the original repo as a remote upstream in your local forked one:<br>
+
+   `git remote add upstream https://github.com/anikashc/invictus.git`
+
+Now, you can easily syncronize your forked (origin) repository with the upstream one by doing<br>
+
+   `git checkout master` # Make sure you always run the following commands from the master branch
+   `git fetch --all`
+   `git pull --rebase upstream master`
+   `git push origin master`
+
+
 To get started:
 
 1. Make a new branch on your local repository for every feature you work on<br>
@@ -54,5 +66,7 @@ To get started:
    `git commit -m "<your commit message>"`
 3. Pull the changes from master (there may have been merged changes while you were working). It is also a good practice to pull before starting to work. You may get some merge conflicts. Try to see if your code is replacing the existing code and if you are not able to merge conflicts then contact one of the heads.
    `git pull origin master`
-4. After that push to your branch (you won't be able to push to master):<br>
+4. New packages may have been installed. Run this in both root and client folder:<br>
+   `npm install`
+5. After that push to your branch (you won't be able to push to master):<br>
    `git push -u origin <branch name>`
