@@ -1,20 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
-import  {Container} from 'react-bootstrap'
+import Home from './Screens/Home';
+import Container from '@material-ui/core/Container';
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
       
       <main>
+        <Route path='/' component={Home} exact />
         <Container>
-        <h1>Welcome to Invictus</h1>
+        
         </Container>
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
