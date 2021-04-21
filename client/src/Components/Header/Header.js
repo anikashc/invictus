@@ -1,0 +1,25 @@
+import React from 'react';
+import Navbar from "./Navbar";
+import CustomDrawer from "./customDrawer";
+import { useStyles } from './HeaderStyles';
+
+export default function Header() {      
+  
+  const classes = useStyles();
+  
+  //drawer state
+  const [open, setOpen] = React.useState(false);                
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div className={classes.head}>
+      <Navbar opener = {handleDrawerOpen}/>
+      <CustomDrawer isOpen = {open} closer = {handleDrawerClose} />
+    </div>
+  );
+}
