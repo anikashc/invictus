@@ -17,12 +17,7 @@ export default function Navbar(props) {
           INVICTUS
         </Typography>
 
-        <IconButton 
-        color="inherit" 
-        aria-label="open drawer" 
-        onClick={props.opener} 
-        edge="end"
-        className = {classes.icon}>
+        <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
           <MenuIcon />
         </IconButton>
 
