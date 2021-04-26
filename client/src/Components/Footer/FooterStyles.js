@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import logo from '../../Assets/invictus_logo.png'
 
 export const useStyles = makeStyles({
   root: {
@@ -13,6 +14,7 @@ export const useStyles = makeStyles({
     },
   },
   logoContainer: {
+    background: `url(${logo}) no-repeat`,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
