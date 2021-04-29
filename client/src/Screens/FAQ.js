@@ -1,5 +1,4 @@
-// import React from 'react'
-import { useState } from 'react'
+import { React, useState } from 'react'
 import FaqList from '../Components/FaqList/FaqList'
 
 
@@ -12,9 +11,13 @@ const FAQ = () => {
         { question: 'What is Invictus?', answer: "Invictus is the TechFest of DTU", id: 4 }
     ]);
 
+    const hStyle = {
+        textAlign: 'center'
+    };
+
     return (
         <div className="faq-section">
-            <h1>FAQ Section</h1>
+            <h1 style={hStyle}>FAQ Section</h1>
             <FaqList faqs={faqs} />
         </div>
     )
