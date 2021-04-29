@@ -1,6 +1,5 @@
 /* faq previews / list */
 .faq-preview {
-  padding: 10px 16px;
   margin: 20px 0;
   border: 1px solid #fafafa;
 }
@@ -9,7 +8,26 @@
   border-radius: 2%;
 }
 .faq-preview h4 {
-  font-size: 20px;
+  margin: 0 0;
+  padding: 2px 2px;
+  background-color: rgba(186, 189, 204, 0.1);
+  border-left: 4px solid #3f51b5;
+}
+.faq-preview p {
+  margin: 0 0;
+  padding: 2px 2px;
+  /* background-color: rgba(186, 189, 204, 0.1); */
+  border-left: 4px solid #3f51b5;
+}
+.faq-preview h4 span {
   color: #3f51b5;
-  margin-bottom: 8px;
+  font-size: 28px;
+  padding-left: 4px;
+  font-weight: 400;
+}
+.faq-preview p span {
+  color: #3f51b5;
+  font-size: 28px;
+  padding-left: 4px; 
+  font-weight: 400;
 }

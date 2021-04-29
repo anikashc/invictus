@@ -17,7 +17,7 @@ const FAQ = () => {
 
     return (
         <div className="faq-section">
-            <h1 style={hStyle}>FAQ Section</h1>
+            <h1 style={hStyle}>Frequently Asked Questions (FAQs)</h1>
             <FaqList faqs={faqs} />
         </div>
     )

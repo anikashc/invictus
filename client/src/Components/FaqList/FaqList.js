@@ -8,8 +8,8 @@ const FaqList = (props) => {
       {
         faqs.map((faq) => (
           <div className="faq-preview" key={faq.id}>
-            <h4>Q{faq.id}: {faq.question}</h4>
-            <p>Ans: {faq.answer}</p>
+            <h4><span>Q.</span> {faq.question}</h4>
+            <p><span>A.</span> {faq.answer}</p>
           </div>
         ))
       }
