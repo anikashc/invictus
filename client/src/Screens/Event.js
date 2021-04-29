@@ -1,18 +1,23 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import eventsData from '../Meta/EventsData';
+import React from "react";
+import { useParams } from "react-router-dom";
+import Schedule from "../Components/Event/Schedule";
+import Details from "../Components/Event/Details";
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
 
 const Event = () => {
-    const { id } = useParams()
-    const detail = eventsData[id].detail, date = eventsData[id].schedule.date, time = eventsData[id].schedule.time;
+    const { id } = useParams();
     return (
-        <div>
-            <p>Details: {detail}</p>
-            <p>Date: {date}</p>
-            <p>Time: {time}</p>
-            <button>Register</button>
-        </div>
-    )
-}
+        <>
+            <Details id={id} />
+            <Schedule id={id} />
+            <Container style={{ marginBottom: "2rem" }}>
+                <Button variant="outlined" color="secondary">
+                    Register
+                </Button>
+            </Container>
+        </>
+    );
+};
 
-export default Event
+export default Event;
