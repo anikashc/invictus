@@ -6,9 +6,9 @@ import { useStyles } from './FooterStyles';
 const Footer = () => {
   const classes = useStyles();
 
-    return (
-        <footer> 
-        <Grid container className={classes.root}>
+  return (
+    <footer>
+      <Grid container className={classes.root}>
         <Grid item sm={4} className={classes.logoContainer}>
         </Grid>
         <Grid
@@ -17,13 +17,13 @@ const Footer = () => {
           sm={3}
           className={classes.helpCenterContainer}
         >
-        <Box className={classes.header}>CONTACTS: </Box>
-        <Box className={classNames(classes.subtext, classes.help)}>
-          +91-9891416666
+          <Box className={classes.header}>CONTACTS: </Box>
+          <Box className={classNames(classes.subtext, classes.help)}>
+            +91-9891416666
         </Box>
-        <Box className={classNames(classes.subtext, classes.help)}>
-        New Delhi
-        </Box>    
+          <Box className={classNames(classes.subtext, classes.help)}>
+            New Delhi
+        </Box>
         </Grid>
         <Grid item xs={6} sm={2} className={classes.sitemap}>
           <Box className={classes.header}>SITEMAP</Box>
@@ -41,13 +41,13 @@ const Footer = () => {
           <Box className={classes.header}>Find us on</Box>
           <Box className={classes.socialLinksContainer}>
             <Box className={classes.iconsContainer}>
-             
+
             </Box>
           </Box>
         </Grid>
       </Grid>
-        </footer>
-    )
+    </footer>
+  )
 }
 
 export default Footer
