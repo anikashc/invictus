@@ -5,6 +5,12 @@ import TeamData from './TeamData';
 const Team = (props) => {
     return (
         <>
+        <div className="team">
+            <h1>
+                Team
+            </h1>
+
+        </div>
             <main className="page-content">
                 {TeamData.map((val) => {
 
