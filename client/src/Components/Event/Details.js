@@ -1,5 +1,5 @@
 import React from "react";
-import eventsData from "../../Meta/EventsData";
+import eventsData from "../../Assets/EventsData";
 import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import logo from "../../Assets/blindcoding.png";

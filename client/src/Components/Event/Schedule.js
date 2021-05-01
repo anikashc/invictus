@@ -1,10 +1,9 @@
 import React from "react";
-import eventsData from "../../Meta/EventsData";
+import eventsData from "../../Assets/EventsData";
 import Container from "@material-ui/core/Container";
 
 const Schedule = ({ id }) => {
-    const date = eventsData[id].schedule.date,
-        time = eventsData[id].schedule.time;
+    const date = eventsData[id].schedule.date, time = eventsData[id].schedule.time;
     return (
         <section>
             <Container>
