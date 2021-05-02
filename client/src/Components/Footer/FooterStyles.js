@@ -1,12 +1,13 @@
 import { makeStyles } from '@material-ui/core';
 import logo from '../../Assets/invictus_logo.png'
-import footer_bg from '../../Assets/Images/footer_bg.jpg'
+import footer_bg from '../../Assets/Backgrounds/footer_bg.jpg'
 
 export const useStyles = makeStyles({
   root: {
     width: '100%',
     height: '350px',
     background: `url(${footer_bg}) no-repeat`,
+    backgroundSize: 'cover',
   },
   logoContainer: {
     display: 'flex',
