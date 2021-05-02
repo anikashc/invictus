@@ -10,6 +10,7 @@ export default function CustomDrawer(props) {
 
   return (
 
+    <div>
     <Drawer
       anchor='right'
       open={props.isOpen}
@@ -19,32 +20,33 @@ export default function CustomDrawer(props) {
       >
       <div className={classes.drawerHeader}>
         <IconButton onClick={props.closer}>
-          <ChevronRightIcon/>
+          <ChevronRightIcon style = {{color:"#D66496"}}/>
         </IconButton>
       </div>
         
         
       <List>
-        {['Home', 'Events', 'Sponsors', 'Schedule', 'Team', 'Sponsors', 'FAQ'].map((text, index) => (
-          <Container className = {classes.itemContainer} key = {"itemcontainer"+index}>
+        {['HOME', 'EVENTS', 'SCHEDULE', 'SPONSORS', 'TEAM', 'FAQ'].map((text, index) => (
 
-              <ListItem 
-                button  
-                key = {'itemtext'+index}
-                onClick = {()=>text === 'Home' ? history.push(`/`) : history.push(`/${text}`)}>
+          <ListItem 
+            button  
+            key = {'itemtext'+index}
+            onClick = {()=> {
+              props.closer();
+              text === 'HOME' ? history.push(`/`) : history.push(`/${text.toLowerCase()}`)
+            }}
+            className = {classes.itemButton}
+          >
 
-                  <Typography  className = {classes.itemText}>
-                    {text}
-                  </Typography>
+            <Typography  className = {classes.itemText}>
+              {text}
+            </Typography>
                 
-              </ListItem>
-
-              <Divider />
-
-          </Container>
+          </ListItem>
         ))}
       </List>
 
     </Drawer>
+    </div>
   );
 }
