@@ -1,21 +1,16 @@
 import { makeStyles } from '@material-ui/core';
 import logo from '../../Assets/invictus_logo.png'
+import footer_bg from '../../Assets/Images/footer_bg.jpg'
 
 export const useStyles = makeStyles({
   root: {
     width: '100%',
     height: '290px',
-    background: '#F8F8F8',
-    position: 'relative',
-    '@media (max-width:599px)': {
-      height: '260px',
-      background: '#FFFFFF',
-      borderRadius: '40px 40px 0px 0px',
-    },
+    background: `url(${footer_bg}) no-repeat`,
   },
   logoContainer: {
-    background: `url(${logo}) no-repeat`,
     display: 'flex',
+    paddingTop: '70px',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -42,8 +37,8 @@ export const useStyles = makeStyles({
     },
   },
   subtext: {
-    color: '#929292',
-    fontFamily: 'Montserrat',
+    color: '#515151',
+    fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 500,
     fontSize: '1rem',
@@ -60,6 +55,8 @@ export const useStyles = makeStyles({
     color: '#FF767C',
   },
   helpCenterContainer: {
+    
+    paddingTop: '70px',
     '& .MuiBox-root:nth-child(2)': {
         paddingTop: '19px',
       },
@@ -80,11 +77,11 @@ export const useStyles = makeStyles({
   },
   header: {
     paddingTop: '48px',
-    fontFamily: 'Montserrat',
+    fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: '1.5rem',
-    color: '#737373',
+    color: '#515151',
     '@media (max-width:768px)': {
       fontSize: '1rem',
     },
@@ -95,6 +92,8 @@ export const useStyles = makeStyles({
     },
   },
   sitemap: {
+    
+    paddingTop: '70px',
     '& .MuiBox-root:nth-child(2)': {
       paddingTop: '18px',
     },
@@ -117,6 +116,7 @@ export const useStyles = makeStyles({
     },
   },
   findus: {
+    padding: '70px 0px 0px 30px',
     '@media (max-width:599px)': {
       position: 'absolute',
       bottom: '32px',
