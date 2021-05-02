@@ -10,7 +10,7 @@ const Footer = () => {
         <footer> 
         <Grid container className={classes.root}>
         <Grid item sm={4} className={classes.findus}>
-          <Box className={classes.header}>Find us on</Box>
+          <Box className={classes.header}>FOLLOW US ON</Box>
           <Box className={classes.socialLinksContainer}>
             <Box className={classes.iconsContainer}>
              

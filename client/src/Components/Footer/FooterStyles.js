@@ -5,12 +5,12 @@ import footer_bg from '../../Assets/Images/footer_bg.jpg'
 export const useStyles = makeStyles({
   root: {
     width: '100%',
-    height: '290px',
+    height: '350px',
     background: `url(${footer_bg}) no-repeat`,
   },
   logoContainer: {
     display: 'flex',
-    paddingTop: '70px',
+    paddingTop: '120px',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -56,7 +56,7 @@ export const useStyles = makeStyles({
   },
   helpCenterContainer: {
     
-    paddingTop: '70px',
+    paddingTop: '120px',
     '& .MuiBox-root:nth-child(2)': {
         paddingTop: '19px',
       },
@@ -93,7 +93,7 @@ export const useStyles = makeStyles({
   },
   sitemap: {
     
-    paddingTop: '70px',
+    paddingTop: '120px',
     '& .MuiBox-root:nth-child(2)': {
       paddingTop: '18px',
     },
@@ -116,7 +116,7 @@ export const useStyles = makeStyles({
     },
   },
   findus: {
-    padding: '70px 0px 0px 30px',
+    padding: '120px 0px 0px 50px',
     '@media (max-width:599px)': {
       position: 'absolute',
       bottom: '32px',
