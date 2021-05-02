@@ -25,7 +25,7 @@ export default function CustomDrawer(props) {
         
         
       <List>
-        {['Home', 'Events', 'Sponsors', 'Schedule', 'Team', 'Sponsors', 'FAQ'].map((text, index) => (
+        {['Home', 'Events', 'Sponsors', 'Schedule', 'Team', 'FAQ'].map((text, index) => (
           <Container className = {classes.itemContainer} key = {"itemcontainer"+index}>
 
               <ListItem 

@@ -20,7 +20,7 @@ function App() {
           <Route path='/events' component={Events} exact />
           <Route path='/sponsors' component={Sponsor} exact />
           <Route path='/team' component={Team} exact />
-          <Route path='/event/:id' component={Event} />
+          <Route path='/events/:id' component={Event} />
         </Container>
       </main>
       <Footer />
