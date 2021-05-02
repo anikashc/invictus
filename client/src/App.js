@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
-import Home from './Screens/Home';
+import Home from './Screens/Home/Home';
 import Event from './Screens/Event';
 import Events from './Screens/Events';
 import FAQ from './Screens/FAQ';
 import Sponsor from './Screens/Sponsor';
-import Team from './Screens/Team';
+import Team from './Screens/Meet_the_team/Team';
 import Container from '@material-ui/core/Container';
 function App() {
   return (
