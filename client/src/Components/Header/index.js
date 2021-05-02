@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "./Navbar";
-import CustomDrawer from "./customDrawer";
+import CustomDrawer from "./Drawer";
 import { useStyles } from './HeaderStyles';
 
 export default function Header() {      
