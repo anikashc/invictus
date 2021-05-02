@@ -10,7 +10,13 @@ const eventsData = {
         'end': {
             'dateTime': '2021-05-01T22:00:00+05:30',
             'timeZone': 'Asia/Kolkata'
-        }
+        },
+        'host' : [
+            'qwerty',
+            'wasd'
+        ],
+        'poster' : 'https://via.placeholder.com/150',
+        'platform' : 'http://example.com/'
     },
     'robot' : {
         'summary': 'Robot event',
@@ -23,7 +29,13 @@ const eventsData = {
         'end': {
             'dateTime': '2021-05-01T22:00:00+05:30',
             'timeZone': 'Asia/Kolkata'
-        }
+        },
+        'host' : [
+            'qwerty',
+            'wasd'
+        ],
+        'poster' : 'https://via.placeholder.com/150',
+        'platform' : 'http://example.com/'
     },
 }
 
