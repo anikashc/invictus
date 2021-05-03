@@ -1,6 +1,7 @@
 import React from 'react';
 import {Drawer, List, Divider, IconButton, Typography, Container, ListItem}  from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import { useStyles } from './DrawerStyles';
 import { useHistory } from 'react-router-dom';
 
@@ -10,17 +11,17 @@ export default function CustomDrawer(props) {
 
   return (
 
-    <div>
     <Drawer
       anchor='right'
       open={props.isOpen}
+      ModalProps={{ onBackdropClick: props.closer }}
       classes={{
        paper: classes.drawerPaper,
       }}
       >
       <div className={classes.drawerHeader}>
         <IconButton onClick={props.closer}>
-          <ChevronRightIcon style = {{color:"#D66496"}}/>
+          <ChevronRightIcon style = {{color:"#231962"}}/>
         </IconButton>
       </div>
         
@@ -47,6 +48,5 @@ export default function CustomDrawer(props) {
       </List>
 
     </Drawer>
-    </div>
   );
 }
