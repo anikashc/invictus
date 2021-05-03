@@ -1,16 +1,27 @@
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
 
-import prizes_bg from '../../Assets/Backgrounds/prizes.jpg'
+import Box from '@material-ui/core/Box';
+import prizes_bg from '../../Assets/Backgrounds/prizes_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
         background:  `url(${prizes_bg}) no-repeat`,
         backgroundPosition: 'center',
-        backgroundSize: '100% 115%',
+        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
-    }
+    },
+    header:{  
+        paddingTop: '20px',  
+      color: '#FFFFFF', 
+      fontSize: '2.5rem',
+      display: 'flex',
+      justifyContent: 'center',
+      fontFamily: 'Rajdhani',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      }
 })
 
 const Prizes = () => {
@@ -18,6 +29,7 @@ const Prizes = () => {
     return (
         <div className={classes.root}>
             
+          <Box className={classes.header}>PRIZES</Box>
         </div>
     )
 }
