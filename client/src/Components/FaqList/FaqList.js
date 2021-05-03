@@ -1,5 +1,7 @@
 import React from 'react';
 import './FaqListStyles.css';
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 
 const FaqList = ({ faq, index, toggleHandler }) => {
 
@@ -10,10 +12,18 @@ const FaqList = ({ faq, index, toggleHandler }) => {
       onClick={() => toggleHandler(index)}
     >
       <div className={"faq-question" + (faq.open ? " active" : "")}>
-        {faq.question}
+        <i className="faq-icon">
+          {faq.open ? <RemoveIcon /> : <AddIcon />}
+        </i>
+        <span>
+          {faq.question}
+        </span>
       </div>
       <div className="faq-answer">
-        {faq.answer}
+        <p>
+          {faq.answer}
+        </p>
+
       </div>
     </div>
   );
