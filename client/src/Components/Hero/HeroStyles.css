@@ -14,10 +14,13 @@ nav .nav-wrapper {
   
   h1 {
     font-weight: 300;
+    font-size: xx-large;
+    color: aliceblue;
   }
   
   p {
     font-size: 16px;
+    color: aliceblue;
   }
   
   .stat p {
