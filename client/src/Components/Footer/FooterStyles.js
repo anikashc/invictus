@@ -8,6 +8,10 @@ export const useStyles = makeStyles({
     height: '350px',
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',
+    '@media (max-width:599px)': {
+      height: '150px',
+    }
+
   },
   logoContainer: {
     display: 'flex',
