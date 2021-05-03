@@ -50,7 +50,7 @@ const Footer = () => {
           xs={4}
           className={classes.helpCenterContainer}
         >
-        <Box className={classes.header}>CONTACTS: </Box>
+        <Box className={classes.header}>CONTACTS</Box>
         <Box className={classNames(classes.subtext, classes.help)}>
           +91-9891416666
         </Box>

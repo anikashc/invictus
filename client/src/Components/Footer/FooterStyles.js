@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core';
-import logo from '../../Assets/invictus_logo.png'
 import footer_bg from '../../Assets/Backgrounds/footer_bg.jpg'
 
 export const useStyles = makeStyles({
