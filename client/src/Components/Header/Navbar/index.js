@@ -10,19 +10,19 @@ export default function Navbar(props) {
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
-    <AppBar position="sticky" >
-       <Toolbar>
+      <AppBar position="sticky" >
+        <Toolbar>
 
-        <Typography variant="h6" className={classes.title} noWrap>
-          INVICTUS
-        </Typography>
+          <Typography variant="h6" className={classes.title} noWrap>
+            INVICTUS
+          </Typography>
 
-        <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
-          <MenuIcon />
-        </IconButton>
+          <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
+            <MenuIcon />
+          </IconButton>
 
-      </Toolbar>
-    </AppBar>
-  </Slide>
+        </Toolbar>
+      </AppBar>
+    </Slide>
   );
 }

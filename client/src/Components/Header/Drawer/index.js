@@ -1,6 +1,7 @@
 import React from 'react';
 import {Drawer, List, Divider, IconButton, Typography, Container, ListItem}  from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import { useStyles } from './DrawerStyles';
 import { useHistory } from 'react-router-dom';
 
@@ -13,35 +14,36 @@ export default function CustomDrawer(props) {
     <Drawer
       anchor='right'
       open={props.isOpen}
+      ModalProps={{ onBackdropClick: props.closer }}
       classes={{
        paper: classes.drawerPaper,
       }}
       >
       <div className={classes.drawerHeader}>
         <IconButton onClick={props.closer}>
-          <ChevronRightIcon/>
+          <ChevronRightIcon style = {{color:"#231962"}}/>
         </IconButton>
       </div>
         
         
       <List>
-        {['Home', 'Events', 'Sponsors', 'Schedule', 'Team', 'Sponsors', 'FAQ'].map((text, index) => (
-          <Container className = {classes.itemContainer} key = {"itemcontainer"+index}>
+        {['HOME', 'EVENTS', 'SCHEDULE', 'SPONSORS', 'TEAM', 'FAQ'].map((text, index) => (
 
-              <ListItem 
-                button  
-                key = {'itemtext'+index}
-                onClick = {()=>text === 'Home' ? history.push(`/`) : history.push(`/${text}`)}>
+          <ListItem 
+            button  
+            key = {'itemtext'+index}
+            onClick = {()=> {
+              props.closer();
+              text === 'HOME' ? history.push(`/`) : history.push(`/${text.toLowerCase()}`)
+            }}
+            className = {classes.itemButton}
+          >
 
-                  <Typography  className = {classes.itemText}>
-                    {text}
-                  </Typography>
+            <Typography  className = {classes.itemText}>
+              {text}
+            </Typography>
                 
-              </ListItem>
-
-              <Divider />
-
-          </Container>
+          </ListItem>
         ))}
       </List>
 
