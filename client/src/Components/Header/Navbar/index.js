@@ -20,12 +20,12 @@ export default function Navbar(props) {
           
         </Typography>
 
-        <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
-          <MenuIcon />
-        </IconButton>
+          <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
+            <MenuIcon />
+          </IconButton>
 
-      </Toolbar>
-    </AppBar>
-  </Slide>
+        </Toolbar>
+      </AppBar>
+    </Slide>
   );
 }
