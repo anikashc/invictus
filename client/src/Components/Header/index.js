@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <div className={classes.head}>
+    <div className={classes.head} style = {{zIndex:1100}}>
       <Navbar opener = {handleDrawerOpen}/>
       <CustomDrawer isOpen = {open} closer = {handleDrawerClose} />
     </div>
