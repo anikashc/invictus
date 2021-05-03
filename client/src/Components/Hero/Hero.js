@@ -1,8 +1,6 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg'
 import './HeroStyles.css'
-import Container from '@material-ui/core/Container';
-import { Button } from '@material-ui/core';
 const Hero = () => {
   return (
     <section
@@ -11,18 +9,18 @@ const Hero = () => {
     >
       <ParticlesBg type="lines" num={450} bg={true} />
       <div className="container valign-wrapper jc-center">
-        <Container className="valign center-align white-text">
-          <h1>
+        <div className="valign center-align white-text">
+          <h2>
             INVICTUS
-          </h1>
+          </h2>
 
           <p className="big">
             Lets Begin
           </p>
 
           
-          <Button size="large" variant="contained" color='danger' target="_blank" href="https://github.com/anikashc/invictus">Github</Button>
-        </Container>
+          <a className="btn waves-light waves-effect" target="_blank" href="https://github.com/anikashc/invictus">Github</a>
+        </div>
       </div>
     </section>
   );
