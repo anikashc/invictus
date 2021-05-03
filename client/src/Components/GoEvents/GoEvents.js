@@ -32,7 +32,7 @@ const GoEvents = () => {
           <Box className={classes.header}>GLIMPSE OF EVENTS</Box>
         <ul class="cards-event">
   <li>
-    <a href="#" class="card-event">
+    <a href="" class="card-event">
       <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
@@ -48,7 +48,7 @@ const GoEvents = () => {
     </a>      
   </li>
   <li>
-    <a href="#" class="card-event">
+    <a href="" class="card-event">
       <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
       <div class="card__overlay">        
         <div class="card__header">
