@@ -1,15 +1,38 @@
 import React from 'react'
 import './GoEvents.css'
+import { makeStyles } from '@material-ui/core'
+import Box from '@material-ui/core/Box';
+import glimpse_of_events_bg from '../../Assets/Backgrounds/glimpse_of_events.jpg'
 
-
-
+const useStyles= makeStyles({
+    root:{
+        background:  `url(${glimpse_of_events_bg}) no-repeat`,
+        backgroundSize: '100% 100%',
+        height: '100%',
+        width: '100%',
+        padding: '10px',
+    },
+    header:{  
+      paddingTop: '20px',  
+    color: '#FFFFFF', 
+    fontSize: '2.5rem',
+    display: 'flex',
+    justifyContent: 'center',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    }
+})
 
 const GoEvents = () => {
+  const classes=useStyles();
+
     return (
-        <div class="body">
+        <div class="body" className={classes.root}>
+          <Box className={classes.header}>GLIMPSE OF EVENTS</Box>
         <ul class="cards-event">
   <li>
-    <a href="" class="card-event">
+    <a href="#" class="card-event">
       <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
@@ -25,7 +48,7 @@ const GoEvents = () => {
     </a>      
   </li>
   <li>
-    <a href="" class="card-event">
+    <a href="#" class="card-event">
       <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
       <div class="card__overlay">        
         <div class="card__header">
