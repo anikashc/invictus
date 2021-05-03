@@ -9,11 +9,24 @@ import FAQ from './Screens/FAQ';
 import Sponsor from './Screens/Sponsor';
 import Team from './Screens/Meet_the_team/Team';
 import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles= makeStyles({
+  root: {
+    minHeight: '60vh',
+    '@media (max-width:599px)': {
+      height: '80vh',
+    }
+  },
+  
+})
+
 function App() {
+  const classes= useStyles();
   return (
     <Router>
       <Header />
-      <main>
+      <main className={classes.root}>
         <div>
           <Route path='/' component={Home} exact />
           <Route path='/faq' component={FAQ} exact />
