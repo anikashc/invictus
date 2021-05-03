@@ -35,7 +35,7 @@ const useStyles= makeStyles({
       fontWeight: 'bold',
       },
       subtext: {
-        padding: '30px 0 0 50px', 
+        padding: '10px 0 0 50px', 
         color: '#000000',  
         fontSize: '1.5rem',
         fontFamily: 'Rajdhani',
