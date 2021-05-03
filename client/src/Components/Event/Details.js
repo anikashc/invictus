@@ -2,10 +2,9 @@ import React from "react";
 import eventsData from "../../Assets/EventsData";
 import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import logo from "../../Assets/blindcoding.png";
 
 const Details = ({ id }) => {
-    const detail = eventsData[id].detail;
+    const detail = eventsData[id].description, logo = eventsData[id].poster;
     return (
         <div style={{ flexGrow: 1, marginTop: "3rem" }}>
             <Grid container spacing={3}>
@@ -22,10 +21,7 @@ const Details = ({ id }) => {
                         <p>{detail}</p>
                     </Container>
                 </Grid>
-                <Grid
-                    item
-                    xs
-                    style={{
+                <Grid item xs style={{
                         background: `url(${logo}) no-repeat`,
                         "@media (max-width:599px)": {
                             position: "absolute",
