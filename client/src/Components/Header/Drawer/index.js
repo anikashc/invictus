@@ -1,7 +1,6 @@
 import React from 'react';
 import {Drawer, List, Divider, IconButton, Typography, Container, ListItem}  from '@material-ui/core';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { useStyles } from './DrawerStyles';
 import { useHistory } from 'react-router-dom';
 
@@ -21,7 +20,7 @@ export default function CustomDrawer(props) {
       >
       <div className={classes.drawerHeader}>
         <IconButton onClick={props.closer}>
-          <ChevronRightIcon style = {{color:"#231962"}}/>
+          <ArrowForwardIcon style = {{color:"#231962"}}/>
         </IconButton>
       </div>
         
