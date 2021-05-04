@@ -6,9 +6,6 @@ import WhatsNew_bg from '../../Assets/Backgrounds/whats_new_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${WhatsNew_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
     },

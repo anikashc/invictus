@@ -4,7 +4,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Screens/Home/Home';
 import Event from './Screens/Event';
-import Events from './Screens/Events';
+import Events from './Screens/Events/index';
 import FAQ from './Screens/FAQ';
 import Sponsor from './Screens/Sponsor';
 import Team from './Screens/Meet_the_team/Team';
