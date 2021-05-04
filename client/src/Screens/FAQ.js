@@ -6,9 +6,10 @@ import faq_bg from '../Assets/Backgrounds/faq_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${faq_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: '100% 100%',
+        background: '#654ea3',  /* fallback for old browsers */
+        background: '-webkit-linear-gradient(to bottom, #eaafc8, #654ea3)',  /* Chrome 10-25, Safari 5.1-6 */
+        background: 'linear-gradient(to bottom, #eaafc8, #654ea3)',/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
         height: '100vh',
         width: '100%',
     },

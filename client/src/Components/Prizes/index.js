@@ -6,9 +6,6 @@ import prizes_bg from '../../Assets/Backgrounds/prizes_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${prizes_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
     },
