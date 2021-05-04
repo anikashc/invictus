@@ -2,6 +2,7 @@ import {
   Card, CardActionArea, CardMedia, CardContent,
   Typography, CardActions, Button, makeStyles} 
 from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -16,6 +17,7 @@ export default function EventCard(props)  {
   const classes = useStyles();
   const name = Object.keys(props.event);
   const data = Object.entries(props.event)[0][1];
+  const history = useHistory();
 
 return (
   <Card className={classes.root}>
@@ -35,10 +37,7 @@ return (
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="small" color="primary">
-        Register
-      </Button>
-      <Button size="small" color="primary">
+      <Button size="small" color="primary" onClick = {() => history.push(`/events/${name}`)}>
         Details
       </Button>
     </CardActions>
