@@ -3,11 +3,18 @@ li {
   margin: 0 0 10px 0;
 }
 #litext {
-  vertical-align: top;
+    vertical-align: top;
 }
+span {
+  display: none;
+}
+
 li:hover {
   color: #fffffff6;
   cursor: pointer;
+}
+li:hover span {
+  display: contents;
 }
 .pagination {
   top: 28.55%;
@@ -32,6 +39,9 @@ li:hover {
 .active {
   /* text-decoration: underline; */
   color: #fffffff6;
+}
+.active span {
+  display: contents;
 }
 @media only screen and (max-width: 600px) {
   .pagination {
