@@ -5,20 +5,20 @@ const FAQ = () => {
 
     const [faqs, setFaqs] = useState([
         {
-            question: 'Why Invictus?',
-            answer: "Invictus is the TechFest of DTU",
+            question: 'What if I’ve never been to a hackathon before?',
+            answer: "Perfect! We welcome hackers of all experience levels and backgrounds. We will be providing resources and workshops to help new hackers get started on projects and learn new technologies. There will also be mentors at the event to help guide you.",
             visible: false,
             id: 1
         },
         {
-            question: 'Team size Invictus?',
-            answer: "Invictus is the TechFest of DTU",
+            question: 'Can I come with a project pre-built or will I have to build from scratch?',
+            answer: "You will be building your project from scratch. However, feel free to come with ideas of what you want to build!",
             visible: false,
             id: 2
         },
         {
             question: 'What events Invictus?',
-            answer: "Invictus is the TechFest of DTU",
+            answer: "Invictus is the TechFest of DTU Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, cum? ",
             visible: false,
             id: 3
         },
@@ -31,10 +31,13 @@ const FAQ = () => {
     ]);
 
     const hStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignContent: 'center',
-        padding: '90px 50px 15px 15px'
+        display: 'block',
+        position: 'relative',
+        textAlign: 'center',
+        padding: '5%',
+        marginBottom: '20px',
+        maxWidth: 'inherit',
+        boxSizeing: 'border-box'
     };
 
     const spanStyle = {
@@ -50,15 +53,16 @@ const FAQ = () => {
             } else {
                 faq.open = false;
             }
-
             return faq;
         }))
     };
 
     return (
-        <div className="faq-page">
+        // <div className="faq-page">
+        <div className="faq-section">
             <h1 style={hStyle}>F<span style={spanStyle}>.</span>A<span style={spanStyle}>.</span>Q<span style={spanStyle}>.</span></h1>
-            <div className="faq-section">
+
+            <div className="faq-list">
                 {faqs.map((faq, index) => (
                     <FaqList
                         faq={faq}
@@ -68,7 +72,9 @@ const FAQ = () => {
                     />
                 ))}
             </div>
+
         </div>
+        // </div>
     );
 
 }
