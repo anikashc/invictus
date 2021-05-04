@@ -123,4 +123,16 @@ export const useStyles = makeStyles({
       display: 'flex',
     },
   },
+  findusLink: {
+    color:'#081261',
+    "&:hover": {
+      color: "white"
+    }
+  },
+  sitemapLink: {
+    color:'#081261',
+    "&:hover": {
+      color: "white"
+    }
+  }
 });
