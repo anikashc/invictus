@@ -7,21 +7,22 @@ export const useStyles = makeStyles({
     height: '350px',
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',
-    '@media (max-width:599px)': {
+    '@media (max-width:599px)': //mobile screens
+    {
       height: '150px',
     }
   },
-  subtext: {
+  subtext: {//web view
     color: '#081261',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: '1.2rem',
     lineHeight: '1.2rem',
-    '@media (max-width:768px)': {
+    '@media (max-width:768px)': {//tablet view
       fontSize: '0.6rem',
     },
-    '@media (max-width:599px)': {
+    '@media (max-width:599px)': {//mobile view
       fontSize: '11px',
       lineHeight: '13px',
     },

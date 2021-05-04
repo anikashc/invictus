@@ -1,5 +1,29 @@
 import { React, useState } from 'react';
+import { makeStyles } from '@material-ui/core'
 import FaqList from '../Components/FaqList/FaqList';
+import Box from '@material-ui/core/Box';
+import faq_bg from '../Assets/Backgrounds/faq_bg.jpg'
+
+const useStyles= makeStyles({
+    root:{
+        background:  `url(${faq_bg}) no-repeat`,
+        backgroundPosition: 'center',
+        backgroundSize: '100% 100%',
+        height: '100vh',
+        width: '100%',
+    },
+    header:{  
+        paddingTop: '20px',  
+      color: '#FFFFFF', 
+      fontSize: '2.5rem',
+      display: 'flex',
+      justifyContent: 'center',
+      fontFamily: 'Rajdhani',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      }
+})
+
 
 const FAQ = () => {
 
@@ -30,22 +54,6 @@ const FAQ = () => {
         }
     ]);
 
-    const hStyle = {
-        display: 'block',
-        position: 'relative',
-        textAlign: 'center',
-        padding: '5%',
-        marginBottom: '20px',
-        maxWidth: 'inherit',
-        boxSizeing: 'border-box'
-    };
-
-    const spanStyle = {
-        color: 'blue',
-        paddingLeft: '2px',
-        paddingRight: '10px'
-    }
-
     const toggleFaq = index => {
         setFaqs(faqs.map((faq, i) => {
             if (i === index) {
@@ -57,11 +65,12 @@ const FAQ = () => {
         }))
     };
 
-    return (
-        // <div className="faq-page">
-        <div className="faq-section">
-            <h1 style={hStyle}>F<span style={spanStyle}>.</span>A<span style={spanStyle}>.</span>Q<span style={spanStyle}>.</span></h1>
+    const classes= useStyles();
 
+    return (
+        <div className={classes.root}>
+        <div className="faq-section">
+            <Box className={classes.header}>F . A . Q</Box>
             <div className="faq-list">
                 {faqs.map((faq, index) => (
                     <FaqList
@@ -74,7 +83,7 @@ const FAQ = () => {
             </div>
 
         </div>
-        // </div>
+        </div>
     );
 
 }
