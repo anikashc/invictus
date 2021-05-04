@@ -1,16 +1,39 @@
-import React from 'react';
+import { React, useState } from 'react';
+import { makeStyles } from '@material-ui/core'
+import Box from '@material-ui/core/Box';
+import team_bg from '../../Assets/Backgrounds/team_bg.jpg'
 import './Team.css';
 import TeamData from './TeamData';
 
-const Team = (props) => {
-    return (
-        <>
-        <div className="team">
-            <h1>
-                Team
-            </h1>
 
-        </div>
+const useStyles= makeStyles({
+    root:{
+        background:  `url(${team_bg}) no-repeat`,
+        backgroundPosition: 'center',
+        backgroundSize: '100% 100%',
+        height: '100vh',
+        width: '100%',
+    },
+    header:{  
+      paddingTop: '40px',  
+      color: '#FFFFFF', 
+      fontSize: '3rem',
+      display: 'flex',
+      justifyContent: 'center',
+      fontFamily: 'Rajdhani',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      }
+})
+
+
+const Team = (props) => {
+const classes=useStyles();
+
+    return (
+        <div className={classes.root}>
+
+            <Box className={classes.header}>MEET THE TEAM</Box>
             <main className="page-content">
                 {TeamData.map((val) => {
 
@@ -33,7 +56,7 @@ const Team = (props) => {
                 })}
 
             </main>
-        </>
+        </div>
     )
 }
 

@@ -9,16 +9,16 @@
 }
 .faq-section .faq {
   padding: 16px;
-  color: #3f51b5;
+  color: #000000;
   border-bottom: 1px solid rgba(57, 76, 187, 0.2);
 }
 .faq-section .faq.open  {
   border-bottom: 1px solid rgba(63, 81, 181, 0.4);
   transition: 0.4s;
-  background-color: rgba(214, 219, 247, 0.4);
+  background-color: rgba(197, 138, 161, 0.4);
 }
 .faq-section .faq .faq-question:hover {
-  color:rgb(145, 14, 233);
+  color: #1F123D;
 }
 .faq-section .faq .faq-question {
   /* padding: 0 20px;  */
