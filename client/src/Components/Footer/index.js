@@ -10,8 +10,9 @@ const Footer = () => {
   const classes = useStyles();
 
     return (
-        <footer> 
-        <Grid container className={classes.root}>
+        <footer>
+        <Grid container className={classes.root}>   
+        <Grid container className={classes.footer}>
         <Grid item xs={4} className={classes.findus}>
           <Box className={classes.header}>FOLLOW US</Box>
           <Box className={classes.socialLinksContainer}>
@@ -59,6 +60,7 @@ const Footer = () => {
         </Box>    
         </Grid>
       </Grid>
+      </Grid> 
         </footer>
     )
 }
