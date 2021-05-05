@@ -12,9 +12,10 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles= makeStyles({
   root: {
+    height: '100%',
     minHeight: '60vh',
     '@media (max-width:599px)': {
-      height: '80vh',
+      maxHeight: '80vh',
     }
   },
   

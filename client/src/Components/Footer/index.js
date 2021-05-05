@@ -22,17 +22,17 @@ const Footer = () => {
           <Box className={classes.socialLinksContainer}>
           <Box className={classes.section}>
               <a href="https://www.facebook.com/InvictusDtu/" target="_blank">
-              <FacebookIcon  className={classes.findusLink} fontSize="large" />
+              <FacebookIcon  className={classes.findusLink}  />
               </a>
             </Box>
             <Box className={classes.section}>
             <a  href="https://www.instagram.com/invictusdtu/" target="_blank">
-             <InstagramIcon   className={classes.findusLink} fontSize="large"  />
+             <InstagramIcon   className={classes.findusLink}  />
             </a>
             </Box>
             <Box className={classes.section}>
             <a href="https://www.linkedin.com/company/invictus-dtu/" target="_blank">
-             <LinkedInIcon className={classes.findusLink} fontSize="large" />
+             <LinkedInIcon className={classes.findusLink} />
             </a>
             </Box>
           </Box>
