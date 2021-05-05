@@ -7,8 +7,6 @@ import about_box from '../../Assets/Backgrounds/about_box.png'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${about_bg}) no-repeat`,
-        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
     },
@@ -19,14 +17,14 @@ const useStyles= makeStyles({
         }
     },
     aboutBox:{ 
-        padding: '45px',
+        padding: '50px',
         background:  `url(${about_box}) no-repeat`,
         backgroundSize: '100% 70%',
         height: '100vh',
         width: '100%',
     },
     header:{  
-    padding: '40px 0 0 100px',  
+    padding: '50px 0 0 100px',  
       color: '#FFFFFF', 
       fontSize: '2.5rem',
       textAlign: 'left',
@@ -35,7 +33,7 @@ const useStyles= makeStyles({
       fontWeight: 'bold',
       },
       subtext: {
-        padding: '30px 0 0 50px', 
+        padding: '10px 0 0 50px', 
         color: '#000000',  
         fontSize: '1.5rem',
         fontFamily: 'Rajdhani',

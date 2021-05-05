@@ -1,19 +1,20 @@
 import React from 'react'
-import eventData from './eventData.js';
+import eventData from '../../Assets/EventsData.js';
 import {Button} from '@material-ui/core';
 import EventCard from './eventCard';
 
 const Events = () => {
 
   const [selected, setSelected] = React.useState('coding');      
-  let coding = [], robotics = [], games = [];
+  let coding = [], electronics = [], games = [], informative = [];
 
   Object.entries(eventData).forEach(e => {
     let obj = {}
     obj[e[0]] = e[1]
-    if      (e[1].type === 'coding')   coding.push(obj)
-    else if (e[1].type === 'robotics') robotics.push(obj)
-    else if (e[1].type === 'games')    games.push(obj)
+    if      (e[1].type.toLowerCase() === 'coding')   coding.push(obj)
+    else if (e[1].type.toLowerCase() === 'electronics') electronics.push(obj)
+    else if (e[1].type.toLowerCase() === 'games')    games.push(obj)
+    else if (e[1].type.toLowerCase() === 'informative')    informative.push(obj)
   })
 
   let toPrint;
@@ -22,13 +23,18 @@ const Events = () => {
     <EventCard event = {event} key = {'card'+index}/>
     ))
   }
-  else if (selected === 'robotics') {
-    toPrint = robotics.map((event, index) => (
+  else if (selected === 'electronics') {
+    toPrint = electronics.map((event, index) => (
     <EventCard event = {event} key = {'card'+index}/>
     ))
   }
   else if (selected === 'games') {
     toPrint = games.map((event, index) => (
+    <EventCard event = {event} key = {'card'+index}/>
+    ))
+  }
+  else if (selected === 'informative') {
+    toPrint = informative.map((event, index) => (
     <EventCard event = {event} key = {'card'+index}/>
     ))
   }
@@ -42,15 +48,21 @@ const Events = () => {
       </Button>
 
       <Button
-      onClick = {() => setSelected('robotics')}
+      onClick = {() => setSelected('electronics')}
       >
-        Robotics
+        Electronics
       </Button>
       
       <Button
       onClick = {() => setSelected('games')}
       >
         Games
+      </Button>
+      
+      <Button
+      onClick = {() => setSelected('informative')}
+      >
+        Informative
       </Button>
 
       {toPrint}

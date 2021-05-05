@@ -1,7 +1,7 @@
 const eventsData = {
     'chess' : {
         'summary': 'Chess',
-        'type': 'Fun',
+        'type': 'Games',
         'description': '4 Players will be playing a single game simultaneously.We can accept a limited number of registrations in this like top 50 registrations only.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -20,7 +20,7 @@ const eventsData = {
     },
     'case' : {
         'summary': 'Case Study Competition',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis facere quas quos consequuntur ipsam deleniti quia iure cupiditate! Explicabo hic ex dolorem nihil corporis illo, et neque rem non maxime delectus corrupti minus molestiae nisi deserunt culpa sequi, quia consectetur praesentium obcaecati illum sint voluptatum? Quae eligendi ab molestiae quas!',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -39,7 +39,7 @@ const eventsData = {
     },
     'ideathon' : {
         'summary': 'Ideathon',
-        'type': 'Non Tech',
+        'type': 'coding',
         'description': 'Present an idea/ solution towards an existing problem, hardware/software/non technical idea etc.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -58,7 +58,7 @@ const eventsData = {
     },
     'autocad' : {
         'summary': 'AutoCAD',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'A problem statement can be presented and participants will be supposed to develop a possible solution to it in AutoCAD.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -115,7 +115,7 @@ const eventsData = {
     },
     'panel' : {
         'summary': 'Panel Discussion (Webinar)',
-        'type': 'Non Tech',
+        'type': 'coding',
         'description': 'Depends on the speakers - rise of crypto - covid talks - etc. topics',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -155,7 +155,7 @@ const eventsData = {
         
     'museum' : {
         'summary': 'Museum Tour',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'We can collaborate with authorities of a museum to organize a virtual tour of the museum.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -195,7 +195,7 @@ const eventsData = {
         
     'youtuber' : {
         'summary': 'YouTubers Event',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'Informal talk event, Try to contact some local/international technical YouTuber like Marquis Brownie, Technical Guruji etc.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -215,7 +215,7 @@ const eventsData = {
         
     'debate' : {
         'summary': 'Debate Competition',
-        'type': 'Non Tech',
+        'type': 'coding',
         'description': 'Debates on hot topics. Limited registrations. Meet as the platform.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -235,7 +235,7 @@ const eventsData = {
         
     'sketching' : {
         'summary': 'Sketching Competition',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'Sketching competition - judgement based on likes on facebook.',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -255,7 +255,7 @@ const eventsData = {
         
     'photography' : {
         'summary': 'Photography Competition',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'A 3 day photography competition - home quarantine/tech Theme - judgement based on likes on facebook',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',
@@ -276,7 +276,7 @@ const eventsData = {
         
     'cube' : {
         'summary': 'Speed Cubing',
-        'type': 'Fun',
+        'type': 'Games',
         'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis facere quas quos consequuntur ipsam deleniti quia iure cupiditate! Explicabo hic ex dolorem nihil corporis illo, et neque rem non maxime delectus corrupti minus molestiae nisi deserunt culpa sequi, quia consectetur praesentium obcaecati illum sint voluptatum? Quae eligendi ab molestiae quas!',
         'start': {
             'dateTime': '2021-05-01T21:00:00+05:30',

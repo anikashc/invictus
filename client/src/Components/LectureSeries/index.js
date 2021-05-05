@@ -5,9 +5,6 @@ import lectures_bg from '../../Assets/Backgrounds/lectures_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${lectures_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: '100% 115%',
         height: '100vh',
         width: '100%',
     },

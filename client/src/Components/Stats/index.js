@@ -6,9 +6,6 @@ import Box from '@material-ui/core/Box';
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${stats_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
     },

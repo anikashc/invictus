@@ -1,27 +1,30 @@
 import { makeStyles } from '@material-ui/core';
-import footer_bg from '../../Assets/Backgrounds/footer_bg.jpg'
-
+import footer_bg from '../../Assets/Backgrounds/footer_bg.png'
 export const useStyles = makeStyles({
-  root: {
+  root:{
     width: '100%',
     height: '350px',
-    background: `url(${footer_bg}) no-repeat`,
-    backgroundSize: 'cover',
-    '@media (max-width:599px)': {
+    background: '#642A7F',
+    '@media (max-width:599px)': //mobile screens
+    {
       height: '150px',
     }
+
+  footer: {
+    background: `url(${footer_bg}) no-repeat`,
+    backgroundSize: 'cover',
   },
-  subtext: {
+  subtext: {//web view
     color: '#081261',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: '1.2rem',
     lineHeight: '1.2rem',
-    '@media (max-width:768px)': {
+    '@media (max-width:768px)': {//tablet view
       fontSize: '0.6rem',
     },
-    '@media (max-width:599px)': {
+    '@media (max-width:599px)': {//mobile view
       fontSize: '11px',
       lineHeight: '13px',
     },
