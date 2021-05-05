@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 
 import Box from '@material-ui/core/Box';
+import { positions } from '@material-ui/system';
 import about_bg from '../../Assets/Backgrounds/about_bg.jpg'
 import about_box from '../../Assets/Backgrounds/about_box.png'
 
@@ -26,20 +27,52 @@ const useStyles= makeStyles({
     header:{  
     padding: '50px 0 0 100px',  
       color: '#FFFFFF', 
-      fontSize: '2.5rem',
+      fontSize: '3.6rem',
       textAlign: 'left',
       fontFamily: 'Rajdhani',
       fontStyle: 'normal',
       fontWeight: 'bold',
+      lineHeight:'140px',
+      position:'static',
+      right: '20%',
+      '@media (max-width:768px)':{//Tablet View
+        fontSize:'1.9rem',
+    },
+    '@media (max-width:599px)':{//Mobile View
+        fontSize:'1.0rem',    
       },
+      '@media (max-width:375px)':{//Mobile View
+        fontSize:'0.7rem',    
+      },
+      '@media (max-width:320px)':{//S-Mobile View
+        fontSize:'6px',
+        lineHeight:'60px',
+        left: '20%',
+        position:'static',
+        overflow: 'hidden',    
+      },
+    },
       subtext: {
         padding: '10px 0 0 50px', 
         color: '#000000',  
-        fontSize: '1.5rem',
+        fontSize: '1.8rem',
         fontFamily: 'Rajdhani',
         fontStyle: 'normal',
         fontWeight: 'bold',
-      }
+        '@media (max-width:768px)':{//Tablet View
+            fontSize:'1rem',
+        },
+        '@media (max-width:599px)':{//Mobile View
+            fontSize:'0.7rem',    
+          },
+          '@media (max-width:375px)':{//S-Mobile View
+            fontSize:'0.6rem',    
+          },
+          '@media (max-width:320px)':{//Mobile View
+            fontSize:'0.3rem',
+            position: 'relative',    
+          },
+        },
 })
 
 const About = () => {
