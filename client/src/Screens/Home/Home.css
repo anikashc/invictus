@@ -1,0 +1,47 @@
+li {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+}
+#litext {
+    vertical-align: top;
+}
+span {
+  display: none;
+}
+
+li:hover {
+  color: #fffffff6;
+  cursor: pointer;
+}
+li:hover span {
+  display: contents;
+}
+.pagination {
+  top: 20%;
+  left: 3.5%;
+  background: inherit;
+  height: 50%;
+  text-align: left;
+  position: fixed;
+  font-family: Rajdhani;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 108.8%;
+  letter-spacing: 0.1em;
+  color: #ffffff7c;
+}
+.active {
+  /* text-decoration: underline; */
+  color: #fffffff6;
+}
+.active span {
+  display: contents;
+}
+@media only screen and (max-width: 600px) {
+  .pagination {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+}

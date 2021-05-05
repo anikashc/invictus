@@ -1,8 +1,10 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography, IconButton} from '@material-ui/core';
+import {AppBar, Toolbar, Button, IconButton, Fade} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStyles } from './NavbarStyles';
 import {useScrollTrigger, Slide} from "@material-ui/core";
+import logo from '../../../Assets/Logos/logo.svg';
+import {  Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const classes = useStyles();
@@ -10,19 +12,42 @@ export default function Navbar(props) {
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
-    <AppBar position="sticky" >
-       <Toolbar>
+      <AppBar className={classes.navbar} elevation={0}>
+        <Toolbar>
 
-        <Typography variant="h6" className={classes.title} noWrap>
-          INVICTUS
-        </Typography>
+          <div className = {classes.title}>
+            <Link to="/">
 
-        <IconButton color="inherit" aria-label="open drawer" onClick={props.opener} edge="end" style={{border:"none",outline:"none"}}>
-          <MenuIcon />
-        </IconButton>
+              <img 
+                src = {logo} 
+                className = {classes.image}
+              />
 
-      </Toolbar>
-    </AppBar>
-  </Slide>
+            </Link>
+          </div>
+          
+          <Fade in={!props.isOpen}>
+            <div>
+              <Button 
+                className = {classes.register}
+              >
+                REGISTER NOW
+              </Button>
+
+              <IconButton 
+                className = {classes.iconButton}
+                color="inherit" 
+                aria-label="open drawer" 
+                onClick={props.opener} 
+                edge="end" 
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </Fade>
+
+        </Toolbar>
+      </AppBar>
+    </Slide>
   );
 }
