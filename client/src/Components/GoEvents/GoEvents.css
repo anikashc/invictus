@@ -73,7 +73,6 @@
 
 .card__arc path {
   fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }       
 
 .card-event:hover .card__header {
@@ -116,3 +115,12 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
 }    
+
+@media screen and (max-width: 1465px) and (min-width:1250px) {
+
+  .cards-event
+  {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  }
+
+}
