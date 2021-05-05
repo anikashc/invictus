@@ -21,19 +21,18 @@ const Footer = () => {
           <Box className={classes.header}>FOLLOW US</Box>
           <Box className={classes.socialLinksContainer}>
             <Box className={classes.section}>
-
-              <a className={classes.findusLink} href="https://www.facebook.com/InvictusDtu/" target="_blank">
-              <FacebookIcon fontSize="large" style = {{color:"#081261"}} />
+              <a href="https://www.facebook.com/InvictusDtu/" target="_blank">
+              <FacebookIcon  className={classes.findusLink} fontSize="large" />
               </a>
             </Box>
             <Box className={classes.section}>
-            <a className={classes.findusLink} href="https://www.instagram.com/invictusdtu/" target="_blank">
-             <InstagramIcon fontSize="large"  style = {{color:"#081261"}}/>
+            <a  href="https://www.instagram.com/invictusdtu/" target="_blank">
+             <InstagramIcon   className={classes.findusLink} fontSize="large"  />
             </a>
             </Box>
             <Box className={classes.section}>
-            <a className={classes.findusLink} href="https://www.linkedin.com/company/invictus-dtu/" target="_blank">
-             <LinkedInIcon fontSize="large"  style = {{color:"#081261"}}/>
+            <a href="https://www.linkedin.com/company/invictus-dtu/" target="_blank">
+             <LinkedInIcon className={classes.findusLink} fontSize="large" />
             </a>
             </Box>
           </Box>

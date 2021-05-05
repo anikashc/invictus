@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     {
       height: '150px',
     }
-
+  },
   footer: {
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',
@@ -128,12 +128,15 @@ export const useStyles = makeStyles({
   },
   findusLink: {
     color:'#081261',
+    cursor: 'pointer',
     "&:hover": {
       color: "white"
     }
   },
   sitemapLink: {
     color:'#081261',
+    cursor: 'pointer',
+    textDecoration: 'none',
     "&:hover": {
       color: "white"
     }
