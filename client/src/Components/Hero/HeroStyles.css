@@ -87,7 +87,9 @@ nav .nav-wrapper {
   #hero .container {
     height: 90vh;
   }
-  
+  .particles-bg-canvas-self{
+    background: linear-gradient(to top,#642A7F, #1B1430);
+  }
   #features .material-icons {
     font-size: 50px;
   }
