@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     {
       height: '150px',
     }
-
+  },
   footer: {
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',
@@ -53,9 +53,7 @@ export const useStyles = makeStyles({
     padding: '3px 4px',
   },
   header: {
-    paddingTop: '35px',
-    fontSize: '30px',
-    lineHeight: '40px',
+    paddingTop: '50px',
     letterSpacing: '0.05em',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
@@ -128,12 +126,15 @@ export const useStyles = makeStyles({
   },
   findusLink: {
     color:'#081261',
+    cursor: 'pointer',
     "&:hover": {
       color: "white"
     }
   },
   sitemapLink: {
     color:'#081261',
+    cursor: 'pointer',
+    textDecoration: 'none',
     "&:hover": {
       color: "white"
     }
