@@ -75,10 +75,20 @@
   fill: var(--surface-color);
 }       
 
-.card-event:hover .card__header {
-  transform: translateY(0);
+.card-event:hover .card__header { 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
+@media screen and (max-width: 1465px) and (min-width:1250px) {
+
+  .cards-event
+  {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  }
+
+}
 .card__thumb {
   flex-shrink: 0;
   width: 50px;
