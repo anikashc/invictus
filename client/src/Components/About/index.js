@@ -33,11 +33,23 @@ const useStyles= makeStyles({
       fontStyle: 'normal',
       fontWeight: 'bold',
       lineHeight:'140px',
+      position:'static',
+      right: '20%',
       '@media (max-width:768px)':{//Tablet View
         fontSize:'1.9rem',
     },
     '@media (max-width:599px)':{//Mobile View
         fontSize:'1.0rem',    
+      },
+      '@media (max-width:375px)':{//Mobile View
+        fontSize:'0.7rem',    
+      },
+      '@media (max-width:320px)':{//S-Mobile View
+        fontSize:'6px',
+        lineHeight:'60px',
+        left: '20%',
+        position:'static',
+        overflow: 'hidden',    
       },
     },
       subtext: {
@@ -52,6 +64,13 @@ const useStyles= makeStyles({
         },
         '@media (max-width:599px)':{//Mobile View
             fontSize:'0.7rem',    
+          },
+          '@media (max-width:375px)':{//S-Mobile View
+            fontSize:'0.6rem',    
+          },
+          '@media (max-width:320px)':{//Mobile View
+            fontSize:'0.3rem',
+            position: 'relative',    
           },
         },
 })
