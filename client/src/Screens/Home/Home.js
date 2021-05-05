@@ -17,7 +17,7 @@ const useStyles= makeStyles({
     minHeight: '60vh',
     background: ' #ad5389',/* fallback for old browsers */
     background: '-webkit-linear-gradient(to top, #3c1053, #ad5389)', /* Chrome 10-25, Safari 5.1-6 */
-    background: 'linear-gradient(to top, #642A7F, #9B418C)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: '#000000', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     '@media (max-width:599px)': {
       height: '80vh',
     }
