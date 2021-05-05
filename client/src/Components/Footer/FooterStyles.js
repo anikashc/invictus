@@ -53,9 +53,7 @@ export const useStyles = makeStyles({
     padding: '3px 4px',
   },
   header: {
-    paddingTop: '35px',
-    fontSize: '30px',
-    lineHeight: '40px',
+    paddingTop: '50px',
     letterSpacing: '0.05em',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',

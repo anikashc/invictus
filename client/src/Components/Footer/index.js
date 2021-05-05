@@ -20,7 +20,7 @@ const Footer = () => {
         <Grid item xs={4} className={classes.findus}>
           <Box className={classes.header}>FOLLOW US</Box>
           <Box className={classes.socialLinksContainer}>
-            <Box className={classes.section}>
+          <Box className={classes.section}>
               <a href="https://www.facebook.com/InvictusDtu/" target="_blank">
               <FacebookIcon  className={classes.findusLink} fontSize="large" />
               </a>
