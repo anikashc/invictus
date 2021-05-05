@@ -33,7 +33,7 @@ const WhatsNew = () => {
         <div className={classes.root}>
             
           <Box className={classes.header}>WHATS NEW</Box>
-          <Carousel slides={slides} autoplay={true} interval={1000}/>
+          <Carousel slides={slides} autoplay={true} interval={2000}/>
         </div>
     )
 }

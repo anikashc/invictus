@@ -17,7 +17,7 @@ const useStyles= makeStyles({
         }
     },
     aboutBox:{ 
-        padding: '50px',
+        padding: '60px',
         background:  `url(${about_box}) no-repeat`,
         backgroundSize: '100% 70%',
         height: '100vh',

@@ -25,6 +25,7 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "particles-bg": "^2.5.5",
+    "react-awesome-slider": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "reactstrap": "^8.9.0"
