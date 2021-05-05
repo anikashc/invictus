@@ -17,23 +17,18 @@ li:hover span {
   display: contents;
 }
 .pagination {
-  top: 28.55%;
-  left: 3.49%;
+  top: 20%;
+  left: 3.5%;
   background: inherit;
-  height: 100%;
+  height: 50%;
   text-align: left;
   position: fixed;
-
   font-family: Rajdhani;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 108.8%;
-
-  /* identical to box height, or 22px */
-
   letter-spacing: 0.1em;
-
   color: #ffffff7c;
 }
 .active {

@@ -1,16 +1,18 @@
 import { makeStyles } from '@material-ui/core';
-import footer_bg from '../../Assets/Backgrounds/footer_bg.jpg'
-
+import footer_bg from '../../Assets/Backgrounds/footer_bg.png'
 export const useStyles = makeStyles({
-  root: {
+  root:{
     width: '100%',
     height: '350px',
-    background: `url(${footer_bg}) no-repeat`,
-    backgroundSize: 'cover',
+    background: '#642A7F',
     '@media (max-width:599px)': //mobile screens
     {
       height: '150px',
     }
+  },
+  footer: {
+    background: `url(${footer_bg}) no-repeat`,
+    backgroundSize: 'cover',
   },
   subtext: {//web view
     color: '#081261',
@@ -51,9 +53,7 @@ export const useStyles = makeStyles({
     padding: '3px 4px',
   },
   header: {
-    paddingTop: '35px',
-    fontSize: '30px',
-    lineHeight: '40px',
+    paddingTop: '50px',
     letterSpacing: '0.05em',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
@@ -124,4 +124,19 @@ export const useStyles = makeStyles({
       display: 'flex',
     },
   },
+  findusLink: {
+    color:'#081261',
+    cursor: 'pointer',
+    "&:hover": {
+      color: "white"
+    }
+  },
+  sitemapLink: {
+    color:'#081261',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    "&:hover": {
+      color: "white"
+    }
+  }
 });

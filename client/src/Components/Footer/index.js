@@ -6,23 +6,34 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
+import { Link } from 'react-router-dom';
+
+
 const Footer = () => {
   const classes = useStyles();
 
     return (
-        <footer> 
-        <Grid container className={classes.root}>
+
+        <footer>
+        <Grid container className={classes.root}>   
+        <Grid container className={classes.footer}>
         <Grid item xs={4} className={classes.findus}>
           <Box className={classes.header}>FOLLOW US</Box>
           <Box className={classes.socialLinksContainer}>
+          <Box className={classes.section}>
+              <a href="https://www.facebook.com/InvictusDtu/" target="_blank">
+              <FacebookIcon  className={classes.findusLink} fontSize="large" />
+              </a>
+            </Box>
             <Box className={classes.section}>
-             <FacebookIcon fontSize="large"  style = {{color:"#081261"}}/>
+            <a  href="https://www.instagram.com/invictusdtu/" target="_blank">
+             <InstagramIcon   className={classes.findusLink} fontSize="large"  />
+            </a>
             </Box>
-            <Box className={classes.section} style = {{color:"#081261"}}>
-             <InstagramIcon fontSize="large"/>
-            </Box>
-            <Box className={classes.section} style = {{color:"#081261"}}>
-             <LinkedInIcon fontSize="large"/>
+            <Box className={classes.section}>
+            <a href="https://www.linkedin.com/company/invictus-dtu/" target="_blank">
+             <LinkedInIcon className={classes.findusLink} fontSize="large" />
+            </a>
             </Box>
           </Box>
         </Grid>
@@ -30,19 +41,29 @@ const Footer = () => {
         <Grid item xs={4} className={classes.sitemap}>
           <Box className={classes.header}>SITEMAP</Box>
           <Box className={classNames(classes.subtext, classes.section)}>
-            About
+            <Link className={classes.sitemapLink} to="/">
+              About
+            </Link>
           </Box>
           <Box className={classNames(classes.subtext, classes.section)}>
-            Events
+            <Link className={classes.sitemapLink} to="/events">
+              Events
+            </Link>
           </Box>
           <Box className={classNames(classes.subtext, classes.section)}>
+            <Link className={classes.sitemapLink} to="/team">
               Team
+            </Link>
           </Box>
           <Box className={classNames(classes.subtext, classes.section)}>
-            Sponsors
+            <Link className={classes.sitemapLink} to="/sponsors">
+              Sponsors
+            </Link>
           </Box>
           <Box className={classNames(classes.subtext, classes.section)}>
-            FAQ
+            <Link className={classes.sitemapLink} to="/faq">
+              FAQ
+            </Link>
           </Box>
         </Grid>
         <Grid
@@ -59,6 +80,7 @@ const Footer = () => {
         </Box>    
         </Grid>
       </Grid>
+      </Grid> 
         </footer>
     )
 }

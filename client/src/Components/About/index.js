@@ -7,8 +7,6 @@ import about_box from '../../Assets/Backgrounds/about_box.png'
 
 const useStyles= makeStyles({
     root:{
-        background:  `url(${about_bg}) no-repeat`,
-        backgroundSize: '100% 100%',
         height: '100vh',
         width: '100%',
     },
@@ -19,7 +17,7 @@ const useStyles= makeStyles({
         }
     },
     aboutBox:{ 
-        padding: '50px',
+        padding: '60px',
         background:  `url(${about_box}) no-repeat`,
         backgroundSize: '100% 70%',
         height: '100vh',
