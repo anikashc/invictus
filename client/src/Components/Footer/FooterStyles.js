@@ -3,11 +3,11 @@ import footer_bg from '../../Assets/Backgrounds/footer_bg.png'
 export const useStyles = makeStyles({
   root:{
     width: '100%',
-    height: '350px',
+    height: '30vh',
     background: '#642A7F',
     '@media (max-width:599px)': //mobile screens
     {
-      height: '150px',
+      height: '20vh',
     }
   },
   footer: {
@@ -22,10 +22,10 @@ export const useStyles = makeStyles({
     fontSize: '1.2rem',
     lineHeight: '1.2rem',
     '@media (max-width:768px)': {//tablet view
-      fontSize: '0.6rem',
+      fontSize: '1rem',
     },
     '@media (max-width:599px)': {//mobile view
-      fontSize: '11px',
+      fontSize: '0.8rem',
       lineHeight: '13px',
     },
   },
@@ -38,15 +38,13 @@ export const useStyles = makeStyles({
         paddingTop: '19px',
       },
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '138px',
-      left: '15%',
+      
     },
     '@media (max-width:374px)': {
-      left: '12%',
+     
     },
     '@media (max-width:320px)': {
-      left: '5%',
+      
     },
   },
   help: {
@@ -61,10 +59,10 @@ export const useStyles = makeStyles({
     fontSize: '1.7rem',
     color: '#081261',
     '@media (max-width:768px)': {
-      fontSize: '1rem',
+      fontSize: '1.5rem',
     },
     '@media (max-width:599px)': {
-      fontSize: '18px',
+      fontSize: '1rem',
       lineHeight: '20px',
       padding: 0,
     },
@@ -78,21 +76,12 @@ export const useStyles = makeStyles({
       paddingTop: '18px',
     },
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '120px',
-      right: '15%',
-    },
-    '@media (max-width:374px)': {
-      right: '12%',
-    },
-    '@media (max-width:320px)': {
-      right: '5%',
     },
   },
   section: {
     padding: '3px 4px',
     '@media (max-width:599px)': {
-      padding: '5px 4px',
+      padding: '2px 4px',
     },
   },
   findus: {
@@ -101,22 +90,20 @@ export const useStyles = makeStyles({
     alignItems: 'center',
     padding: '120px 0px 0px 0px',
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '32px',
-      right: '15%',
     },
     '@media (max-width:374px)': {
-      right: '12%',
+     
     },
     '@media (max-width:320px)': {
-      right: '5%',
+     
     },
   },
   socialLinksContainer: {
     display: 'flex',
     padding: '20px 15px',
     '@media (max-width:599px)': {
-      padding: '0',
+      paddingTop: '20',
+      flexDirection: 'column',
     },
   },
   iconsContainer: {
@@ -127,8 +114,14 @@ export const useStyles = makeStyles({
   findusLink: {
     color:'#081261',
     cursor: 'pointer',
+    height: '40px',
+    width: '40px',
     "&:hover": {
       color: "white"
+    },
+    '@media (max-width:599px)': {
+    height: '20px',
+    width: '20px',
     }
   },
   sitemapLink: {
