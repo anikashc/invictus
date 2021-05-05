@@ -1,7 +1,6 @@
 import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
-import team_bg from '../../Assets/Backgrounds/team_bg.jpg'
 import './Team.css';
 import TeamData from './TeamData';
 

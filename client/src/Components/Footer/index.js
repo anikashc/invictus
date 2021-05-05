@@ -8,14 +8,19 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 import { Link } from 'react-router-dom';
 
+import { useLocation } from 'react-router-dom'
+
 
 const Footer = () => {
   const classes = useStyles();
+  
+  const location = useLocation().pathname;
 
     return (
 
         <footer>
-        <Grid container className={classes.root}>   
+        <Grid container className={classNames(classes.root,{
+        [classes.sponsor] : location==='/sponsors',})}>   
         <Grid container className={classes.footer}>
         <Grid item xs={4} className={classes.findus}>
           <Box className={classes.header}>FOLLOW US</Box>
