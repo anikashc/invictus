@@ -15,7 +15,7 @@ const useStyles= makeStyles({
     height: '100%',
     minHeight: '60vh',
     '@media (max-width:599px)': {
-      maxHeight: '80vh',
+      minHeight: '80vh',
     }
   },
   
