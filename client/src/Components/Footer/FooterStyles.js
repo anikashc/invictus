@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core';
 import footer_bg from '../../Assets/Backgrounds/footer_bg.png'
-
 export const useStyles = makeStyles({
   root:{
     width: '100%',
@@ -10,7 +9,7 @@ export const useStyles = makeStyles({
     {
       height: '150px',
     }
-  },
+
   footer: {
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',
@@ -127,4 +126,16 @@ export const useStyles = makeStyles({
       display: 'flex',
     },
   },
+  findusLink: {
+    color:'#081261',
+    "&:hover": {
+      color: "white"
+    }
+  },
+  sitemapLink: {
+    color:'#081261',
+    "&:hover": {
+      color: "white"
+    }
+  }
 });
