@@ -6,8 +6,8 @@ const Schedule = ({ id }) => {
     const stDate = eventsData[id].start.dateTime,
         edDate = eventsData[id].end.dateTime;
     return (
-        <section>
-            <h2 style={{ color: "#FFF" }}>Schedule</h2>
+        <section style={{ color: "#FFF" }}>
+            <h2 style={{ color: "#EE81B2" }}>Schedule</h2>
             <p>Start Date: {stDate.substr(0, 10)}</p>
             <p>Start Time: {stDate.substr(11, 8)}</p>
             <p>End Date: {edDate.substr(0, 10)}</p>

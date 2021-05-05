@@ -6,9 +6,9 @@ import { useParams } from "react-router-dom";
 import Schedule from "../Components/Event/Schedule";
 import Details from "../Components/Event/Details";
 import Image from "../Components/Event/Image";
-import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import { Grid } from "@material-ui/core";
+import { AppBar, Toolbar, Button, IconButton, Fade } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
@@ -16,13 +16,13 @@ const useStyles = makeStyles({
         background:
             "-webkit-linear-gradient(to top, #3c1053, #ad5389)" /* Chrome 10-25, Safari 5.1-6 */,
         background: "linear-gradient(to top,#642A7F, #1B1430)",
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ height:
-            "100vh",
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: "100vh",
         width: "100%",
     },
     header: {
         paddingTop: "20px",
-        color: "#FFFFFF",
+        color: "#EE81B2",
         fontSize: "2.5rem",
         display: "flex",
         justifyContent: "center",
@@ -33,9 +33,20 @@ const useStyles = makeStyles({
     eventBody: {
         margineBottom: "2rem",
         fontSize: "1.5rem",
-        flexGrow: 1,
+        // flexGrow: 1,
     },
-    button: {},
+    register: {
+        background: "#D66496",
+        fontFamily: "Rajdhani",
+        color: "white",
+        fontWeight: "bold",
+        padding: "5px 25px 5px 25px",
+        "&:hover": {
+            backgroundColor: "#DB4789",
+        },
+        fontSize: "1.5rem",
+        margin: "-15px",
+    },
     image: {
         marginTop: "5rem",
     },
@@ -48,7 +59,7 @@ const Event = () => {
     return (
         <div className={classes.root}>
             <Container className={classes.eventBody}>
-                <Grid container spacing={10}>
+                <Grid style={{ marginTop: "0vh" }} container spacing={10}>
                     <Grid container item xs={7} spacing={3}>
                         <Details id={id} />
                     </Grid>
@@ -65,13 +76,11 @@ const Event = () => {
                         <Schedule id={id} />
                     </Grid>
                     <Grid container item xs={12}>
-                        <Button
-                            variant="outlined"
-                            color="secondary"
-                            className={classes.button}
-                        >
-                            Register
-                        </Button>
+                        <div>
+                            <Button className={classes.register}>
+                                REGISTER NOW
+                            </Button>
+                        </div>
                     </Grid>
                 </Grid>
             </Container>

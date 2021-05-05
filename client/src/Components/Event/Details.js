@@ -15,13 +15,13 @@ const Details = ({ id }) => {
                 <Grid item xs={12}>
                     <h2
                         style={{
-                            color: "#FFF",
+                            color: "#EE81B2",
                             textTransform: "capitalize",
                         }}
                     >
                         {id}
                     </h2>
-                    <p>{detail}</p>
+                    <p style={{ color: "#FFF" }}>{detail}</p>
                 </Grid>
             </Grid>
         </div>
