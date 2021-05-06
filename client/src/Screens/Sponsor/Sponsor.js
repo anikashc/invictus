@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '@material-ui/core/Container';
 import Hero from '../../Components/Hero/Hero'
 import Details from './Details'
 

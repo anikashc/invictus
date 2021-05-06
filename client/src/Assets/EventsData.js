@@ -15,7 +15,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'https://www.chess.com/4-player-chess'
     },
     'case' : {
@@ -34,7 +34,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
     'ideathon' : {
@@ -53,7 +53,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
     'autocad' : {
@@ -72,7 +72,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
     'virtual' : {
@@ -91,7 +91,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
     'workshop' : {
@@ -110,7 +110,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
     'panel' : {
@@ -129,7 +129,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -149,7 +149,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -169,7 +169,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -189,7 +189,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -209,7 +209,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -229,7 +229,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -249,7 +249,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -269,7 +269,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
         
@@ -290,7 +290,7 @@ const eventsData = {
             'qwerty',
             'wasd'
         ],
-        'poster' : 'https://via.placeholder.com/150',
+        'poster' : 'https://i.imgur.com/oYiTqum.jpg',
         'platform' : 'http://example.com/'
     },
 }

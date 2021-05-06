@@ -1,7 +1,6 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
-import team_bg from '../../Assets/Backgrounds/team_bg.jpg'
 import './Team.css';
 import TeamData from './TeamData';
 
@@ -15,7 +14,7 @@ const useStyles= makeStyles({
         width: '100%',
     },
     header:{  
-      paddingTop: '40px',  
+      paddingTop: '130px',  
       color: '#FFFFFF', 
       fontSize: '3rem',
       display: 'flex',

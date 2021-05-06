@@ -10,6 +10,9 @@ export const useStyles = makeStyles({
       height: '20vh',
     }
   },
+  sponsor:{
+    background: '#FFFFFF',
+  },
   footer: {
     background: `url(${footer_bg}) no-repeat`,
     backgroundSize: 'cover',

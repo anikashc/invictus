@@ -1,12 +1,14 @@
 import React from 'react'
 import eventData from '../../Assets/EventsData.js';
-import {Button} from '@material-ui/core';
+import {Button, Grid} from '@material-ui/core';
 import EventCard from './eventCard';
+import { useStyles } from './eventStyles';
 
 const Events = () => {
 
   const [selected, setSelected] = React.useState('coding');      
   let coding = [], electronics = [], games = [], informative = [];
+  const classes = useStyles();
 
   Object.entries(eventData).forEach(e => {
     let obj = {}
@@ -20,52 +22,77 @@ const Events = () => {
   let toPrint;
   if (selected === 'coding') {
     toPrint = coding.map((event, index) => (
-    <EventCard event = {event} key = {'card'+index}/>
+    <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+      <EventCard event = {event} key = {'card'+index}/>
+    </Grid>
     ))
   }
   else if (selected === 'electronics') {
     toPrint = electronics.map((event, index) => (
-    <EventCard event = {event} key = {'card'+index}/>
+      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+        <EventCard event = {event} key = {'card'+index}/>
+      </Grid>
     ))
   }
   else if (selected === 'games') {
     toPrint = games.map((event, index) => (
-    <EventCard event = {event} key = {'card'+index}/>
+      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+        <EventCard event = {event} key = {'card'+index}/>
+      </Grid>
     ))
   }
   else if (selected === 'informative') {
     toPrint = informative.map((event, index) => (
-    <EventCard event = {event} key = {'card'+index}/>
+      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+        <EventCard event = {event} key = {'card'+index}/>
+      </Grid>
     ))
   }
 
   return (
-    <div>
-      <Button
-      onClick = {() => setSelected('coding')}
-      >
-        Coding
-      </Button>
+    <div className={classes.root}>
+      <Grid container align = 'center' justify = 'center'  className={classes.buttons}>
+        <Grid item xs={12} sm={3}>
+          <Button
+          className = {classes.button}
+          onClick = {() => setSelected('coding')}
+          >
+            Coding
+          </Button>
+        </Grid>
 
-      <Button
-      onClick = {() => setSelected('electronics')}
-      >
-        Electronics
-      </Button>
-      
-      <Button
-      onClick = {() => setSelected('games')}
-      >
-        Games
-      </Button>
-      
-      <Button
-      onClick = {() => setSelected('informative')}
-      >
-        Informative
-      </Button>
+        <Grid item xs={12} sm={3}>
+          <Button
+          className = {classes.button}
+          onClick = {() => setSelected('electronics')}
+          >
+            Electronics
+          </Button>
+        </Grid>
 
-      {toPrint}
+        <Grid item xs={12} sm={3}>
+          <Button
+          className = {classes.button}
+          onClick = {() => setSelected('games')}
+          >
+            Games
+          </Button>
+        </Grid>
+        
+        <Grid item xs={12} sm={3}>
+          <Button
+          className = {classes.button}
+          onClick = {() => setSelected('informative')}
+          >
+            Informative
+          </Button>
+        </Grid>
+        
+      </Grid>
+
+      <Grid container align = 'center'>
+        {toPrint}
+      </Grid>
 
     </div>
   );
