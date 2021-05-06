@@ -6,6 +6,7 @@
 }
 .faq-list {
   display: flex-box;
+  padding-top: 40px;
 }
 .faq-section .faq {
   padding: 16px;
@@ -15,10 +16,10 @@
 .faq-section .faq.open  {
   border-bottom: 1px solid rgba(63, 81, 181, 0.4);
   transition: 0.4s;
-  background-color: rgba(197, 138, 161, 0.4);
+  background-color: rgba(223, 157, 185, 0.4);
 }
 .faq-section .faq .faq-question:hover {
-  color: #1F123D;
+  font-weight: 900;
 }
 .faq-section .faq .faq-question {
   /* padding: 0 20px;  */
@@ -28,6 +29,10 @@
   /* flex-wrap: wrap; */
   position: relative;
   /* border: 1px solid black; */
+  color: #ffffff;
+}
+.faq-section .faq .faq-question span  {
+  display: block;
 }
 .faq-section .faq .faq-answer {
   max-height: 0;
@@ -39,12 +44,13 @@
   /* border: 1px solid black; */
 }
 .faq-section .faq.open .faq-question  {
-  color: rgb(86, 18, 211);
+  color: rgb(236, 232, 243);
   font-weight: 800;
   display: flex;
   align-items: center;
   /* flex-wrap: wrap; */
   position: relative;
+  font-size: large;
 }
 .faq-section .faq.open .faq-answer  {
   max-height: max-content;
@@ -53,6 +59,9 @@
   padding: 8px 0 0 32px ;
   transition: all 0.4s ease-out;
   /* overflow-y: scroll; */
+  color: rgba(235, 221, 227, 0.815);
+  color: #ebffff;
+  /* font-size: large; */
 }
 .faq-question .faq-icon {
   padding-right: 8px;
