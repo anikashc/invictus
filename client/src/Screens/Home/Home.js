@@ -48,7 +48,7 @@ const Home = () => {
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
                 <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>
-                <li><Link  to="whatsnew" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'> What's New</span></Link></li>
+                {/* <li><Link  to="whatsnew" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'> What's New</span></Link></li> */}
                 <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Stats</span></Link></li>
                 <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Prizes</span></Link></li>
                 <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Glimpse Of Events</span></Link></li>
@@ -64,9 +64,9 @@ const Home = () => {
                 <div id="about">
                   <About className="page"/>
                 </div>
-                <div id="whatsnew">
+                {/* <div id="whatsnew">
                   <WhatsNew className="page" />
-                </div>
+                </div> */}
                 
                 <div id="stats" > 
                   <Stats className="page" ref={ref}/>
