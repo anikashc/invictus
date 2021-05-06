@@ -10,6 +10,7 @@ import {Link} from 'react-scroll'
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import About from '../../Components/About';
 import WhatsNew from '../../Components/WhatsNew';
+import { useInView } from 'react-intersection-observer';
 
 const useStyles= makeStyles({
   root: {
@@ -33,7 +34,10 @@ const useStyles= makeStyles({
 
 const Home = () => {
     const classes= useStyles();
-
+    const { ref, inView, entry } = useInView({
+      /* Optional options */
+      threshold: 0,
+    });
     return (
         <React.Fragment>
             <div className="pagination">
@@ -58,9 +62,11 @@ const Home = () => {
                 <div id="whatsnew">
                   <WhatsNew className="page" />
                 </div>
-                <div id="stats"> 
-                  <Stats className="page" />
+                
+                <div id="stats" > 
+                  <Stats className="page" ref={ref}/>
                 </div>
+                
                 <div id="prizes">
                   <Prizes className="page" />
                 </div>
