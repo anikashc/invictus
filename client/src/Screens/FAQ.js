@@ -15,17 +15,16 @@ const useStyles = makeStyles({
         height: '100vh',
         width: '100%',
     },
-    header: {
-        marginTop: '60px',
-        padding: '20px',
-        color: '#FFFFFF',
-        fontSize: '3rem',
-        display: 'flex',
-        justifyContent: 'center',
-        fontFamily: 'Rajdhani',
-        fontStyle: 'normal',
-        fontWeight: '400',
-    }
+    header:{  
+        paddingTop: '110px',  
+      color: '#FFFFFF', 
+      fontSize: '2.5rem',
+      display: 'flex',
+      justifyContent: 'center',
+      fontFamily: 'Rajdhani',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      }
 })
 
 

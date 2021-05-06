@@ -6,7 +6,7 @@ import glimpse_events_bg from '../../Assets/Backgrounds/glimpse_events_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
-        height: '100%',
+        height: '80vh',
         width: '100%',
         padding: '10px',
     },
