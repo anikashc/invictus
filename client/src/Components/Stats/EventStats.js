@@ -15,7 +15,7 @@ const EventStats = () => {
     return (
         <React.Fragment>
             <InView as="div" onChange={(inView, entry) =>{ 
-                console.log('Inview:', inView);
+                // console.log('Inview:', inView);
                 start()
                 }}>
             </InView>

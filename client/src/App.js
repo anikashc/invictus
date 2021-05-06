@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
@@ -23,6 +23,12 @@ const useStyles= makeStyles({
 
 function App() {
   const classes= useStyles();
+  useEffect(() => {
+    window.onunload = () => {
+        // Clear the local storage
+        localStorage.clear()
+    }
+  }, [])
   return (
     <Router>
       <Header />

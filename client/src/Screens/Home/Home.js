@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Home.css'
 import { makeStyles } from '@material-ui/core';
 import GoEvents from '../../Components/GoEvents/GoEvents'
 import Prizes from '../../Components/Prizes';
+import WhatsNewModal from '../../Components/WhatsNewModal/WhatsNewModal';
 import Stats from '../../Components/Stats';
 import LectureSeries from '../../Components/LectureSeries';
 import main_bg from '../../Assets/Backgrounds/main_bg.jpg'
@@ -13,6 +14,7 @@ import WhatsNew from '../../Components/WhatsNew';
 import { useInView } from 'react-intersection-observer';
 
 const useStyles= makeStyles({
+
   root: {
     height: '100%',
     minHeight: '70vh',
@@ -38,8 +40,10 @@ const Home = () => {
       /* Optional options */
       threshold: 0,
     });
+    
     return (
         <React.Fragment>
+            
             <div className="pagination">
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Home</span></Link></li>
@@ -55,6 +59,7 @@ const Home = () => {
             
             <div className={classes.home} id="home"></div>
             <div className={classes.root}>
+                <WhatsNewModal/>
                 {/* <Hero /> */}
                 <div id="about">
                   <About className="page"/>
