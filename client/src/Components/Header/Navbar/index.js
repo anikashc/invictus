@@ -15,7 +15,7 @@ export default function Navbar(props) {
       <AppBar className={classes.navbar} elevation={0}>
         <Toolbar>
 
-          <div className = {classes.title}>
+          <div>
             <Link to="/">
 
               <img 
@@ -25,6 +25,8 @@ export default function Navbar(props) {
 
             </Link>
           </div>
+
+          <div className = {classes.title}></div>
           
           <Fade in={!props.isOpen}>
             <div>
