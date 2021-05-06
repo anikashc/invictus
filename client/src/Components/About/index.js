@@ -15,7 +15,11 @@ const useStyles= makeStyles({
         padding: '150px',    
         '@media (max-width:599px)': {
             padding: '50px',
-        }
+        },
+        '@media (max-width:1440px)':{//L-Laptop View
+          width: '96%',
+          height: '110%',
+      }
     },
     aboutBox:{ 
         padding: '60px',
@@ -23,9 +27,19 @@ const useStyles= makeStyles({
         backgroundSize: '100% 70%',
         height: '100vh',
         width: '100%',
-      '@media (max-width:1024px)':{//Laptop View
-        height: '110vh'
-      },
+        //Media Queries
+      '@media (max-width:1440px)':{//L-Laptop View
+        height: '110vh',
+        width: '90%',
+    },
+    '@media (max-width:768px)':{//L-Laptop View
+      height:'110vh',
+      width: '115%',
+  },
+    
+    '@media (max-width:1024px)':{//Laptop View
+      backgroundSize: '100% 70%'
+  },
     },
     header:{  
     padding: '50px 0 0 100px',  
@@ -40,14 +54,17 @@ const useStyles= makeStyles({
       right: '20%',
       //MediaQueries
       '@media (max-width:1440px)':{//L-Laptop View
-        fontSize:'3.6rem',
+        fontSize:'3.4rem',
+        marginBottom: '5px',
+        marginTop: '20px'
     },
       '@media (max-width:1024px)':{//Laptop View
         fontSize: '2.5rem',
-        padding: '10%',
+        padding: '37px',
+        marginTop:'35px',
     },
     '@media (max-width:768px)':{//Tablet View
-      fontSize: '2rem',
+      fontSize: '1.5rem',
       },
       '@media (max-width:600px)':{//Mobile View 
         fontSize: '1.3rem',
@@ -64,13 +81,16 @@ const useStyles= makeStyles({
         '@media (max-width:1440px)':{//L-Laptop View
           fontSize:'2rem',
           padding: '4%',
+          lineHeight:'35px'
       },
       '@media (max-width:1024px)':{//Laptop View
-        fontSize: '1.3rem',
-        padding: '3px',
+        fontSize: '1.4rem',
+        padding: '7px',
+        lineHeight: '24px',
       },
       '@media (max-width:768px)':{//Tablet View
-        fontSize:'1.1rem',
+        fontSize:'1rem',
+        marginBottom: '30px'
         },
         '@media (max-width:600px)':{//Mobile View 
           fontSize: '0.84rem'
@@ -86,7 +106,7 @@ const About = () => {
                 <div className={classes.aboutBox}>
                     <Box className={classes.header}>ABOUT INVICTUS</Box>
                     <Box className={classes.subtext}>
-                    INVICTUS is the annual technical fest of DelhiTechnological University, formerly known as Delhi College of Engineering.
+                    INVICTUS is the annual technical fest of Delhi Technological University, formerly known as Delhi College of Engineering.
                     Being one of the biggest Tech Fest of North India, it provides a platform for budding Technocrats to explore and put their talent to test when they compete with other prodigies. 
                     It covers a wide range of events in technical domain with some other miscellaneous events for quizzes and ML competitions to fun games and comedy night.  
                     </Box>
