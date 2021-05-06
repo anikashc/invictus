@@ -8,7 +8,7 @@ import {  Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const classes = useStyles();
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger({threshold:0});
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>

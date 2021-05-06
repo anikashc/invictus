@@ -46,13 +46,13 @@ const Home = () => {
             
             <div className="pagination">
               <ul>
-                <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Home</span></Link></li>
-                <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>About</span></Link></li>
-                <li><Link  to="whatsnew" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'> What's New</span></Link></li>
-                <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Stats</span></Link></li>
-                <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Prizes</span></Link></li>
-                <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Glimpse Of Events</span></Link></li>
-                <li><Link  to="lseries" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span id='litext'>Lecture Series</span></Link></li>
+                <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
+                <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>
+                <li><Link  to="whatsnew" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'> What's New</span></Link></li>
+                <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Stats</span></Link></li>
+                <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Prizes</span></Link></li>
+                <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Glimpse Of Events</span></Link></li>
+                <li><Link  to="lseries" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Lecture Series</span></Link></li>
 
               </ul>
             </div>

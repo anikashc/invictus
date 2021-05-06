@@ -14,21 +14,19 @@ export default function EventCard(props)  {
 return (
   <div className={classes.holder}>
   <Card className={classes.root}>
-    <CardActionArea>
-      <CardMedia
-        className={classes.media}
-        image={data.poster}
-        title={name}
-      />
-      <CardContent>
-        <Typography className={classes.heading} variant="h6" component="h2">
-          {Object.keys(props.event)}
-        </Typography>
-        <Typography className={classes.desc} variant="body2" color="textSecondary" component="p">
-          {data.description}
-        </Typography>
-      </CardContent>
-    </CardActionArea>
+    <CardMedia
+      className={classes.media}
+      image={data.poster}
+      title={name}
+    />
+    <CardContent>
+      <Typography className={classes.heading} variant="h6" component="h2">
+        {Object.keys(props.event)}
+      </Typography>
+      <Typography className={classes.desc} variant="body2" color="textSecondary" component="p">
+        {data.description}
+      </Typography>
+    </CardContent>
     <CardActions>
       <Button className={classes.details} size="small" color="primary" onClick = {() => history.push(`/events/${name}`)}>
         Details
