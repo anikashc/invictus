@@ -17,6 +17,7 @@ export const useStyles = makeStyles({
         overflowY: 'auto',
       }
     },
+    cursor:'pointer'
   },
   media: {
     height: 140,
@@ -25,7 +26,8 @@ export const useStyles = makeStyles({
   heading: {
     fontFamily:'Rajdhani',
     fontWeight: '900',
-    marginTop:'-10px'
+    marginTop:'-10px',
+    color:'#081261'
   },
   desc: {
     fontFamily:'Rajdhani',

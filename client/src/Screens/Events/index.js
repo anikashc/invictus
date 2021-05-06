@@ -9,6 +9,12 @@ const Events = () => {
   const [selected, setSelected] = React.useState('coding');      
   let coding = [], electronics = [], games = [], informative = [];
   const classes = useStyles();
+  let condStyle = {
+    background:'#DB4789',
+    color:'#081261', 
+    textShadow: '0.75px 0 #081261', 
+    letterSpacing:'0.75px'
+  }
 
   Object.entries(eventData).forEach(e => {
     let obj = {}
@@ -56,6 +62,7 @@ const Events = () => {
           <Button
           className = {classes.button}
           onClick = {() => setSelected('coding')}
+          style = {selected==='coding'?condStyle:null}
           >
             Coding
           </Button>
@@ -65,6 +72,7 @@ const Events = () => {
           <Button
           className = {classes.button}
           onClick = {() => setSelected('electronics')}
+          style = {selected==='electronics'?condStyle:null}
           >
             Electronics
           </Button>
@@ -74,6 +82,7 @@ const Events = () => {
           <Button
           className = {classes.button}
           onClick = {() => setSelected('games')}
+          style = {selected==='games'?condStyle:null}
           >
             Games
           </Button>
@@ -83,6 +92,7 @@ const Events = () => {
           <Button
           className = {classes.button}
           onClick = {() => setSelected('informative')}
+          style = {selected==='informative'?condStyle:null}
           >
             Informative
           </Button>
