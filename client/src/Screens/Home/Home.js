@@ -30,7 +30,7 @@ const useStyles= makeStyles({
     height: '100%',
     background:  `url(${main_bg}) no-repeat`,
     backgroundPosition: 'center',
-    backgroundSize: '100% 100%',
+    backgroundSize: 'cover',
   }
 })
 
