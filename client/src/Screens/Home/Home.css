@@ -5,15 +5,16 @@ li {
 #litext {
     vertical-align: top;
 }
-span {
-  display: none;
+
+.span {
+  display:none;
 }
 
 li:hover {
   color: #fffffff6;
   cursor: pointer;
 }
-li:hover span {
+li:hover .span {
   display: contents;
 }
 .pagination {
@@ -35,7 +36,7 @@ li:hover span {
   /* text-decoration: underline; */
   color: #fffffff6;
 }
-.active span {
+.active .span {
   display: contents;
 }
 @media only screen and (max-width: 600px) {
