@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./style.css";
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
 
 const minuteSeconds = 60;
 const hourSeconds = 3600;
@@ -28,63 +52,69 @@ const getTimeDays = (time) => (time / daySeconds) | 0;
 
 export default function Timer() {
   const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-  
+  const { height, width } = useWindowDimensions();
 
   const remainingTime = 1621492200 - stratTime;
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
 
   return (
-    <div className="App">
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={daysDuration}
-        initialRemainingTime={remainingTime}
-      >
-        {({ elapsedTime }) =>
-          renderTime("days", getTimeDays(daysDuration - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={daySeconds}
-        initialRemainingTime={remainingTime % daySeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > hourSeconds
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("hours", getTimeHours(daySeconds - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={hourSeconds}
-        initialRemainingTime={remainingTime % hourSeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > minuteSeconds
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("minutes", getTimeMinutes(hourSeconds - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={minuteSeconds}
-        initialRemainingTime={remainingTime % minuteSeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > 0
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("seconds", getTimeSeconds(elapsedTime))
-        }
-      </CountdownCircleTimer>
-    </div>
+    <React.Fragment>
+
+      <div className="App">
+        <CountdownCircleTimer
+          {...timerProps}
+          colors={[["#000000"]]}
+          duration={daysDuration}
+          initialRemainingTime={remainingTime}
+        >
+          {({ elapsedTime }) =>
+            renderTime("days", getTimeDays(daysDuration - elapsedTime))
+          }
+        </CountdownCircleTimer>
+        <CountdownCircleTimer
+          {...timerProps}
+          colors={[["#000000"]]}
+          duration={daySeconds}
+          initialRemainingTime={remainingTime % daySeconds}
+          onComplete={(totalElapsedTime) => [
+            remainingTime - totalElapsedTime > hourSeconds
+          ]}
+        >
+          {({ elapsedTime }) =>
+            renderTime("hours", getTimeHours(daySeconds - elapsedTime))
+          }
+        </CountdownCircleTimer>
+        <CountdownCircleTimer
+          {...timerProps}
+          colors={[["#000000"]]}
+          duration={hourSeconds}
+          initialRemainingTime={remainingTime % hourSeconds}
+          onComplete={(totalElapsedTime) => [
+            remainingTime - totalElapsedTime > minuteSeconds
+          ]}
+        >
+          {({ elapsedTime }) =>
+            renderTime("minutes", getTimeMinutes(hourSeconds - elapsedTime))
+          }
+        </CountdownCircleTimer>
+        <CountdownCircleTimer
+          {...timerProps}
+          colors={[["#000000"]]}
+          duration={minuteSeconds}
+          initialRemainingTime={remainingTime % minuteSeconds}
+          onComplete={(totalElapsedTime) => [
+            remainingTime - totalElapsedTime > 0
+          ]}
+        >
+          {({ elapsedTime }) =>
+            renderTime("seconds", getTimeSeconds(elapsedTime))
+          }
+        </CountdownCircleTimer>
+      </div>
+      <div>
+        width: {width} ~ height: {height}
+      </div>
+    </React.Fragment>
   );
 }

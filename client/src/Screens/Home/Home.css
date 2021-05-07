@@ -70,9 +70,6 @@ li:hover .span {
   text-align: center;
   display: flex;
   color: aliceblue;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
     
 }
 
@@ -96,13 +93,13 @@ li:hover .span {
 }
 
 /* The typing effect */
-@keyframes typing {
+/* @keyframes typing {
   from { width: 0 }
   to { width: 100% }
-}
+} */
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
+/* @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: white; }
-}
+} */
