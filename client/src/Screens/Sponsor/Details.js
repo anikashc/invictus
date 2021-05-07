@@ -16,7 +16,9 @@ const useStyles = makeStyles(theme => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(16, 0, 6),
-    color: '#ffffff'
+    color: '#ffffff',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -50,8 +52,8 @@ export default function Album(props) {
         {/* Hero unit */}
         <div className={classes.heroContent} 
         style={{backgroundColor:"transparent", position:"relative"}}>
-          <Container maxWidth="xs">
-            <Typography component="h1" variant="h2" align="center" color="white" gutterBottom>
+          <Container maxWidth="md">
+            <Typography component="h2" variant="h2" align="center" color="white" gutterBottom>
               Sponsor Us
             </Typography>
             <Typography variant="h5" align="center"  paragraph>
