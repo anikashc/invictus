@@ -6,7 +6,7 @@ import Prizes from '../../Components/Prizes';
 import WhatsNewModal from '../../Components/WhatsNewModal/WhatsNewModal';
 import Stats from '../../Components/Stats';
 import LectureSeries from '../../Components/LectureSeries';
-import main_bg from '../../Assets/Videos/landing_page_bg.mp4'
+import main_bg from '../../Assets/Videos/try2.mp4'
 import {Link} from 'react-scroll'
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import About from '../../Components/About';
