@@ -5,7 +5,7 @@ import EventStats from './EventStats'
 import Box from '@material-ui/core/Box';
 const useStyles= makeStyles({
     root:{
-        height: '50vh',
+        height: '100vh',
         width: '100%',
     },
     header:{  

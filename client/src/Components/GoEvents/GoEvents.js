@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 
 const useStyles= makeStyles({
     root:{
-        height: '80vh',
+        height: '100%',
         width: '100%',
         padding: '10px',
     },
@@ -18,7 +18,7 @@ const useStyles= makeStyles({
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
-    }
+    },
 })
 
 const GoEvents = () => {
