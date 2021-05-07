@@ -6,12 +6,15 @@ import Prizes from '../../Components/Prizes';
 import WhatsNewModal from '../../Components/WhatsNewModal/WhatsNewModal';
 import Stats from '../../Components/Stats';
 import LectureSeries from '../../Components/LectureSeries';
-import main_bg from '../../Assets/Backgrounds/main_bg.jpg'
+import main_bg from '../../Assets/Videos/landing_page_bg.mp4'
 import {Link} from 'react-scroll'
+import { Player } from 'video-react';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import About from '../../Components/About';
 import WhatsNew from '../../Components/WhatsNew';
 import { useInView } from 'react-intersection-observer';
+import LottieAnimation from '../Lottie';
+import ReactPlayer from 'react-player'
 
 const useStyles= makeStyles({
 
@@ -25,12 +28,19 @@ const useStyles= makeStyles({
       minHeight: '100vh',
     }
   },
-  home: {
-    minHeight: '100vh', 
+  home: { 
+    height: '100vh',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent:'center',
+  },
+  video:{ 
     height: '100%',
-    background:  `url(${main_bg}) no-repeat`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    width: '100%',
+  },
+  animationContainer: {
+    padding: '100px',
   }
 })
 
@@ -57,7 +67,21 @@ const Home = () => {
               </ul>
             </div>
             
-            <div className={classes.home} id="home"></div>
+            <div className={classes.home} id="home">
+            <ReactPlayer
+                url={main_bg}
+                playing={true}
+                loop={true}
+                width='100%'
+              />
+            {/* <Player autoplay={true}>
+              <source  src={main_bg}  />
+            </Player> */}
+              {/* <video src={main_bg} autoplay="true" loop="true"></video> */}
+              {/* <div className={classes.animationContainer}>
+              <LottieAnimation lotti={spaceman} height={500} width={500} />
+              </div> */}
+            </div>
             <div className={classes.root}>
                 <WhatsNewModal/>
                 {/* <Hero /> */}

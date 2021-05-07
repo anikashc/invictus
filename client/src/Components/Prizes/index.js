@@ -4,10 +4,15 @@ import React from 'react'
 import Box from '@material-ui/core/Box';
 import prizes_bg from '../../Assets/Backgrounds/prizes_bg.jpg'
 
+import LottieAnimation from './../../Screens/Lottie';
+
+import prize from '../../Assets/Animations/prize.json';
+
 const useStyles= makeStyles({
     root:{
         height: '100vh',
         width: '100%',
+        opacity: '0.3',
     },
     header:{  
         paddingTop: '20px',  
@@ -27,6 +32,9 @@ const Prizes = () => {
         <div className={classes.root}>
             
           <Box className={classes.header}>PRIZES</Box>
+
+          
+          <LottieAnimation lotti={prize} height={500} width={600} />
         </div>
     )
 }
