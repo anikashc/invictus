@@ -151,17 +151,39 @@ li:hover .span {
   }
 
   .typewriter {
-    letter-spacing: 0.08em; /* Adjust as needed */
+    letter-spacing: 0.05em; /* Adjust as needed */
   }
   .typewriter h1 {
-    border-right: 0.08em solid orange; /* The typwriter cursor */
-    letter-spacing: 0.08em; /* Adjust as needed */
+    border-right: 0.05em solid orange; /* The typwriter cursor */
+    letter-spacing: 0.05em; /* Adjust as needed */
     font-size: 500%;
     font-weight: 800;
   }
 
   .typewriter h2 {
-    letter-spacing: 0.05em; /* Adjust as needed */
-    font-size: 100%;
+    letter-spacing: 0.04em; /* Adjust as needed */
+    font-size: 200%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .pagination {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+
+  .typewriter {
+    letter-spacing: 0.03em; /* Adjust as needed */
+  }
+  .typewriter h1 {
+    border-right: 0.03em solid orange; /* The typwriter cursor */
+    letter-spacing: 0.03em; /* Adjust as needed */
+    font-size: 400%;
+    font-weight: 800;
+  }
+
+  .typewriter h2 {
+    letter-spacing: 0.02em; /* Adjust as needed */
+    font-size: 200%;
   }
 }

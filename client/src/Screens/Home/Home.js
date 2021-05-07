@@ -37,6 +37,12 @@ const useStyles= makeStyles({
   },
   animationContainer: {
     padding: '100px',
+  },
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 })
 
@@ -79,8 +85,10 @@ const Home = () => {
                 left: 0}}>
               </video>
               <div className="typewriter">
+                <div className={classes.textContainer}>
                 <h1>Invictus '21</h1>
                 <h2>Coming Soon...</h2>
+                </div>
                 <Timer />
               </div>
             </div>
