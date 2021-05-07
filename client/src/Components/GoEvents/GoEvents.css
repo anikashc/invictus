@@ -81,7 +81,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 1465px) and (min-width:1250px) {
+@media screen and (max-width: 1465px) and (min-width:900px) {
 
   .cards-event
   {

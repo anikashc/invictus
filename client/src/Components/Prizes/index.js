@@ -11,6 +11,10 @@ const useStyles= makeStyles({
     root:{
         height: '100vh',
         width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     header:{  
       paddingTop: '20px',  
@@ -23,16 +27,16 @@ const useStyles= makeStyles({
       fontWeight: 'bold',
       },
       animation: {
+          opacity: '0.2',
           height: '500px',
-          width: '500px',
-          '@media (max-width: 768px)':{    
-          height: '400px',
-          width: '400px', 
-          },
-          '@media (max-width: 600px)':{    
-            height: '100px',
-            width: '100px', 
-            }
+          width: '800px', 
+          '@media (max-width: 900px)':{    
+            width: '600px', 
+         },
+            '@media (max-width: 500px)':{    
+                height: '300px',
+                width: '300px', 
+             }
       }
 })
 

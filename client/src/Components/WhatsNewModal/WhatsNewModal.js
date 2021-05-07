@@ -15,9 +15,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     width: '600px',
     height: '600px',
-    
     boxShadow: theme.shadows[5],
     padding: theme.spacing(0, 0, 0),
+    '@media (max-width: 900px)':{   
+      width: '500px',
+      height: '500px',
+    },
+    '@media (max-width: 600px)':{   
+      width: '300px',
+      height: '300px',
+    },
+    '@media (max-width: 430px)':{   
+      width: '300px',
+      height: '300px',
+    },
+    '@media (max-width: 320px)':{   
+      width: '250px',
+      height: '250px',
+    },
   },
 }));
 
@@ -90,8 +105,8 @@ export default function WhatsNewModel() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
-            <img src="https://picsum.photos/600" alt="1" width='600' height='600' />
+          <div >
+            <img src="https://picsum.photos/600" alt="1" className={classes.paper}/>
           </div>
         </Fade>
       </Modal>
