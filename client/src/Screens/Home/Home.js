@@ -54,7 +54,6 @@ const Home = () => {
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
                 <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>
-                {/* <li><Link  to="whatsnew" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'> What's New</span></Link></li> */}
                 <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Stats</span></Link></li>
                 <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Prizes</span></Link></li>
                 <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Glimpse Of Events</span></Link></li>
@@ -80,23 +79,16 @@ const Home = () => {
                 left: 0}}>
               </video>
               <div className="typewriter">
-                <h1>Invictus</h1>
+                <h1>Invictus '21</h1>
                 <h2>Coming Soon...</h2>
                 <Timer />
               </div>
-              {/* <div className={classes.animationContainer}>
-              <LottieAnimation lotti={spaceman} height={500} width={500} />
-              </div> */}
             </div>
             <div className={classes.root}>
                 <WhatsNewModal/>
-                {/* <Hero /> */}
                 <div id="about">
                   <About className="page"/>
                 </div>
-                {/* <div id="whatsnew">
-                  <WhatsNew className="page" />
-                </div> */}
                 
                 <div id="stats" > 
                   <Stats className="page" ref={ref}/>

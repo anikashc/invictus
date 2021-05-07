@@ -9,7 +9,7 @@ import prize from '../../Assets/Animations/prize.json';
 
 const useStyles= makeStyles({
     root:{
-        height: '100vh',
+        height: '100%',
         width: '100%',
         display: 'flex',
         flexDirection: 'column',

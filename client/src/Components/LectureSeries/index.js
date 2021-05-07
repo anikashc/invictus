@@ -9,8 +9,8 @@ const useStyles= makeStyles({
     },
     header:{  
         paddingTop: '20px',  
-      color: '#FFFFFF', 
       fontSize: '2.5rem',
+      color: '#FFFFFF',
       display: 'flex',
       justifyContent: 'center',
       fontFamily: 'Rajdhani',

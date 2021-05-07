@@ -8,10 +8,22 @@ const useStyles= makeStyles({
         height: '100%',
         width: '100%',
         padding: '10px',
+        background: '#FFFFFF',
+        border: 'solid 10px #D66496',
+        '@media: (max-width: 900px)':{
+          border: 'solid 8px #D66496'
+        },
+        
+        '@media: (max-width: 600px)':{
+          border: 'solid 6px #D66496'
+        },
+        '@media: (max-width: 425px)':{
+          border: 'solid 4px #D66496'
+        },
     },
     header:{  
       paddingTop: '20px',  
-    color: '#FFFFFF', 
+     color: '#1B1430', 
     fontSize: '2.5rem',
     display: 'flex',
     justifyContent: 'center',

@@ -64,7 +64,8 @@ export default function Timer() {
       <div className="App">
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#000000"]]}
+          colors={[["#FFFFFF"]]}
+          trailColor=""
           duration={daysDuration}
           initialRemainingTime={remainingTime}
         >
@@ -74,7 +75,8 @@ export default function Timer() {
         </CountdownCircleTimer>
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#000000"]]}
+          colors={[["#FFFFFF"]]}
+          trailColor=""
           duration={daySeconds}
           initialRemainingTime={remainingTime % daySeconds}
           onComplete={(totalElapsedTime) => [
@@ -87,7 +89,8 @@ export default function Timer() {
         </CountdownCircleTimer>
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#000000"]]}
+          colors={[["#FFFFFF"]]}
+          trailColor=""
           duration={hourSeconds}
           initialRemainingTime={remainingTime % hourSeconds}
           onComplete={(totalElapsedTime) => [
@@ -100,7 +103,8 @@ export default function Timer() {
         </CountdownCircleTimer>
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#000000"]]}
+          colors={[["#FFFFFF"]]}
+          trailColor=""
           duration={minuteSeconds}
           initialRemainingTime={remainingTime % minuteSeconds}
           onComplete={(totalElapsedTime) => [
