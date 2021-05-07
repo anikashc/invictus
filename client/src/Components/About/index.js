@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 
 import Box from '@material-ui/core/Box';
-import about_bg from '../../Assets/Backgrounds/about_bg.jpg'
+
 import Zoom from 'react-reveal/Zoom';
 
 const useStyles= makeStyles({
@@ -22,7 +22,7 @@ const useStyles= makeStyles({
     aboutBox:{ 
         margin: '50px', 
         padding: '50px',   
-        background:  `url(${about_bg}) no-repeat`,
+        
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         
