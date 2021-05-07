@@ -30,11 +30,15 @@ export default function Navbar(props) {
           
           <Fade in={!props.isOpen}>
             <div>
-              <Button 
-                className = {classes.register}
-              >
-                REGISTER NOW
-              </Button>
+              <Link to='/events' style={{ textDecoration: 'none' }}>
+
+                <Button 
+                  className = {classes.register}
+                  href="/events"
+                >
+                  REGISTER NOW
+                </Button>
+              </Link>
 
               <IconButton 
                 className = {classes.iconButton}
