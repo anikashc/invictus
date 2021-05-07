@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import event_bg from "../Assets/Backgrounds/event_bg.jpg";
 import { useParams } from "react-router-dom";
 import Schedule from "../Components/Event/Schedule";
 import Details from "../Components/Event/Details";
