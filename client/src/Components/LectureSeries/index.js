@@ -6,7 +6,7 @@ import CustomizedTimeline from './LectureData';
 
 const useStyles= makeStyles({
     root:{
-        height: '100vh',
+        height: '100%',
         width: '100%',
     },
     header:{  
