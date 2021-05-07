@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Screens/Home/Home';
@@ -22,6 +22,14 @@ const useStyles= makeStyles({
   
 })
 
+function ScrollToTop(props) {
+  const { pathname } = useLocation();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [pathname]);
+  return props.children
+}
+
 function App() {
   const classes= useStyles();
   useEffect(() => {
@@ -32,6 +40,7 @@ function App() {
   }, [])
   return (
     <Router>
+      <ScrollToTop>
       <Header />
       <main className={classes.root}>
         <MouseParticles
@@ -51,6 +60,7 @@ function App() {
         </div>
       </main>
       <Footer />
+      </ScrollToTop>
     </Router>
   );
 }

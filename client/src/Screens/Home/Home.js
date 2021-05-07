@@ -22,8 +22,8 @@ const useStyles= makeStyles({
     height: '100%',
     minHeight: '70vh',
     background: '#1B1430',/* fallback for old browsers */
-    background: '-webkit-linear-gradient(to top, #3c1053, #ad5389)', /* Chrome 10-25, Safari 5.1-6 */
-    background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: '-webkit-linear-gradient(to top, #642A7F, #000000)', /* Chrome 10-25, Safari 5.1-6 */
+    background: 'linear-gradient(to top,#642A7F, #000000)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     '@media (max-width:599px)': {
       minHeight: '100vh',
     }
@@ -34,10 +34,7 @@ const useStyles= makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent:'center',
-  },
-  video:{ 
-    height: '100%',
-    width: '100%',
+    background: 'black'
   },
   animationContainer: {
     padding: '100px',
@@ -68,16 +65,19 @@ const Home = () => {
             </div>
             
             <div className={classes.home} id="home">
-            <ReactPlayer
-                url={main_bg}
-                playing={true}
-                loop={true}
-                width='100%'
-              />
-            {/* <Player autoplay={true}>
-              <source  src={main_bg}  />
-            </Player> */}
-              {/* <video src={main_bg} autoplay="true" loop="true"></video> */}
+              <video 
+              src={main_bg} 
+              autoplay="true" 
+              loop="true" 
+              muted="true"
+              style = {{
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                top: 0,
+                left: 0}}>
+              </video>
               {/* <div className={classes.animationContainer}>
               <LottieAnimation lotti={spaceman} height={500} width={500} />
               </div> */}
