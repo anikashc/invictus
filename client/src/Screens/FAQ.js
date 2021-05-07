@@ -2,7 +2,6 @@ import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core'
 import FaqList from '../Components/FaqList/FaqList';
 import Box from '@material-ui/core/Box';
-import faq_bg from '../Assets/Backgrounds/faq_bg.jpg'
 
 const useStyles= makeStyles({
     root:{

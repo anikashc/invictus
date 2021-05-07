@@ -3,7 +3,6 @@ import React from 'react'
 import Slider from "react-slick";
 import Box from '@material-ui/core/Box';
 import './style.css'
-import WhatsNew_bg from '../../Assets/Backgrounds/whats_new_bg.jpg'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Container from '@material-ui/core/Container';

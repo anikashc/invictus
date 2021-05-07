@@ -2,7 +2,6 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 
 import Box from '@material-ui/core/Box';
-import prizes_bg from '../../Assets/Backgrounds/prizes_bg.jpg'
 
 import LottieAnimation from './../../Screens/Lottie';
 

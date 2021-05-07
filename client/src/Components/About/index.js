@@ -2,7 +2,6 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 
 import Box from '@material-ui/core/Box';
-import { positions } from '@material-ui/system';
 import about_bg from '../../Assets/Backgrounds/about_bg.jpg'
 import Zoom from 'react-reveal/Zoom';
 
