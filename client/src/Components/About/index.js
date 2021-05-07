@@ -52,11 +52,16 @@ const useStyles= makeStyles({
       lineHeight:'140px',
       position:'static',
       right: '20%',
+<<<<<<< HEAD
       //MediaQueries
       '@media (max-width:1440px)':{//L-Laptop View
         fontSize:'3.4rem',
         marginBottom: '5px',
         marginTop: '20px'
+=======
+      '@media (max-width:768px)':{//Tablet View
+        fontSize:'1.9rem',
+>>>>>>> 5f0a3c4 (Responsiveness)
     },
       '@media (max-width:1024px)':{//Laptop View
         fontSize: '2.5rem',
@@ -68,6 +73,16 @@ const useStyles= makeStyles({
       },
       '@media (max-width:600px)':{//Mobile View 
         fontSize: '1.3rem',
+      },
+      '@media (max-width:375px)':{//Mobile View
+        fontSize:'0.7rem',    
+      },
+      '@media (max-width:320px)':{//S-Mobile View
+        fontSize:'6px',
+        lineHeight:'60px',
+        left: '20%',
+        position:'static',
+        overflow: 'hidden',    
       },
     },
       subtext: {
@@ -95,6 +110,19 @@ const useStyles= makeStyles({
         '@media (max-width:600px)':{//Mobile View 
           fontSize: '0.84rem'
         },
+<<<<<<< HEAD
+=======
+        '@media (max-width:599px)':{//Mobile View
+            fontSize:'0.7rem',    
+          },
+          '@media (max-width:375px)':{//S-Mobile View
+            fontSize:'0.6rem',    
+          },
+          '@media (max-width:320px)':{//Mobile View
+            fontSize:'0.3rem',
+            position: 'relative',    
+          },
+>>>>>>> 5f0a3c4 (Responsiveness)
         },
 })
 
