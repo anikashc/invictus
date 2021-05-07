@@ -16,7 +16,7 @@ const renderTime = (dimension, time) => {
   return (
     <div className="time-wrapper">
       <div className="time">{time}</div>
-      <div>{dimension}</div>
+      <div className="dimension">{dimension}</div>
     </div>
   );
 };
@@ -38,7 +38,7 @@ export default function Timer() {
     <div className="App">
       <CountdownCircleTimer
         {...timerProps}
-        colors={[["#7E2E84"]]}
+        colors={[["#000000"]]}
         duration={daysDuration}
         initialRemainingTime={remainingTime}
       >
@@ -48,7 +48,7 @@ export default function Timer() {
       </CountdownCircleTimer>
       <CountdownCircleTimer
         {...timerProps}
-        colors={[["#D14081"]]}
+        colors={[["#000000"]]}
         duration={daySeconds}
         initialRemainingTime={remainingTime % daySeconds}
         onComplete={(totalElapsedTime) => [
@@ -61,7 +61,7 @@ export default function Timer() {
       </CountdownCircleTimer>
       <CountdownCircleTimer
         {...timerProps}
-        colors={[["#EF798A"]]}
+        colors={[["#000000"]]}
         duration={hourSeconds}
         initialRemainingTime={remainingTime % hourSeconds}
         onComplete={(totalElapsedTime) => [
@@ -74,7 +74,7 @@ export default function Timer() {
       </CountdownCircleTimer>
       <CountdownCircleTimer
         {...timerProps}
-        colors={[["#218380"]]}
+        colors={[["#000000"]]}
         duration={minuteSeconds}
         initialRemainingTime={remainingTime % minuteSeconds}
         onComplete={(totalElapsedTime) => [

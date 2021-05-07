@@ -8,9 +8,9 @@ node_modules/
 .eslintcache
 # testing
 /coverage
-
+.netlify
 # production
-/build
+build
 
 # misc
 .DS_Store

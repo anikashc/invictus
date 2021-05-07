@@ -8,13 +8,12 @@ import Stats from '../../Components/Stats';
 import LectureSeries from '../../Components/LectureSeries';
 import main_bg from '../../Assets/Videos/landing_page_bg.mp4'
 import {Link} from 'react-scroll'
-import { Player } from 'video-react';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import About from '../../Components/About';
 import WhatsNew from '../../Components/WhatsNew';
 import { useInView } from 'react-intersection-observer';
 import LottieAnimation from '../Lottie';
-import ReactPlayer from 'react-player'
+import Timer from '../../Components/Timer'
 
 const useStyles= makeStyles({
 
@@ -65,6 +64,7 @@ const Home = () => {
             </div>
             
             <div className={classes.home} id="home">
+              
               <video 
               src={main_bg} 
               autoplay="true" 
@@ -76,8 +76,14 @@ const Home = () => {
                 height: '100%',
                 position: 'absolute',
                 top: 0,
+                opacity: 0.5,
                 left: 0}}>
               </video>
+              <div className="typewriter">
+                <h1>Invictus</h1>
+                <h2>Coming Soon...</h2>
+                <Timer />
+              </div>
               {/* <div className={classes.animationContainer}>
               <LottieAnimation lotti={spaceman} height={500} width={500} />
               </div> */}
