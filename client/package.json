@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "3d-react-carousal": "^3.1.0",
     "@devexpress/dx-react-core": "^2.7.5",
     "@devexpress/dx-react-scheduler": "^2.7.5",
     "@devexpress/dx-react-scheduler-material-ui": "^2.7.5",
@@ -12,6 +11,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
+    "3d-react-carousal": "^3.1.0",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "import": "0.0.6",

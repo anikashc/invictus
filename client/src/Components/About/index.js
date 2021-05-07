@@ -20,9 +20,6 @@ const useStyles= makeStyles({
     aboutBox:{ 
         margin: '50px', 
         padding: '50px',   
-        background:  `url(${about_bg}) no-repeat`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
         
         '@media (max-width: 768px)':{
           padding: '20px 0 20 50px',
