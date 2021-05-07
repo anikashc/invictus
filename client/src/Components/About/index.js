@@ -1,8 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
-
 import Box from '@material-ui/core/Box';
-
 import Zoom from 'react-reveal/Zoom';
 
 const useStyles= makeStyles({
@@ -22,9 +20,6 @@ const useStyles= makeStyles({
     aboutBox:{ 
         margin: '50px', 
         padding: '50px',   
-        
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
         
         '@media (max-width: 768px)':{
           padding: '20px 0 20 50px',

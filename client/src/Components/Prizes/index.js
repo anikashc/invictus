@@ -11,10 +11,9 @@ const useStyles= makeStyles({
     root:{
         height: '100vh',
         width: '100%',
-        opacity: '0.3',
     },
     header:{  
-        paddingTop: '20px',  
+      paddingTop: '20px',  
       color: '#FFFFFF', 
       fontSize: '2.5rem',
       display: 'flex',
@@ -22,6 +21,18 @@ const useStyles= makeStyles({
       fontFamily: 'Rajdhani',
       fontStyle: 'normal',
       fontWeight: 'bold',
+      },
+      animation: {
+          height: '500px',
+          width: '500px',
+          '@media (max-width: 768px)':{    
+          height: '400px',
+          width: '400px', 
+          },
+          '@media (max-width: 600px)':{    
+            height: '100px',
+            width: '100px', 
+            }
       }
 })
 
@@ -33,7 +44,7 @@ const Prizes = () => {
           <Box className={classes.header}>PRIZES</Box>
 
           
-          <LottieAnimation lotti={prize} height={500} width={600} />
+          <LottieAnimation className={classes.animation} lotti={prize} />
         </div>
     )
 }
