@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, useLocation } from 'react-router-dom';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Screens/Home/Home';
@@ -12,6 +12,7 @@ import Schedule from './Screens/Schedule';
 import { makeStyles } from '@material-ui/core';
 import MouseParticles from "react-mouse-particles";
 import Loading from './Screens/Loading/Loading'
+import NotFound from './Screens/NotFound'
 const useStyles= makeStyles({
   root: {
     height: '100%',
@@ -35,11 +36,17 @@ function App() {
   const [loading, setLoading] = useState(true)
   const classes= useStyles();
   useEffect(() => {
+    let first_visit = localStorage.getItem('first_visit');
+    if(!first_visit){
+      setLoading(true);
+  
+      localStorage.setItem('first_visit',1);
+    }
     window.onunload = () => {
         // Clear the local storage
         localStorage.clear()
     }
-    setTimeout(() => setLoading(false), 6000)
+    setTimeout(() => setLoading(false), 4000)
   }, [])
   return (
     <Router>
@@ -61,6 +68,7 @@ function App() {
               <Route path='/schedule' component={Schedule} />
               <Route path='/team' component={Team} exact />
               <Route path='/events/:id' component={Event} />
+              <Route component={NotFound} />
             </div>
           </main>
           <Footer />
