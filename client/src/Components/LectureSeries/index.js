@@ -9,6 +9,7 @@ const useStyles= makeStyles({
         height: '100%',
         width: '100%',
         paddingTop: '20px',
+        overflowX: 'hidden',
         '@media (min-width: 600px)':{
         padding: '10%',
         }

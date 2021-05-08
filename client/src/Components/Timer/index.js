@@ -10,31 +10,13 @@ function getWindowDimensions() {
   };
 }
 
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
-}
 
 
 const minuteSeconds = 60;
 const hourSeconds = 3600;
 const daySeconds = 86400;
 
-const timerProps = {
-  isPlaying: true,
-  size: 150,
-  strokeWidth: 6
-};
+
 
 const renderTime = (dimension, time) => {
   return (
@@ -51,13 +33,35 @@ const getTimeHours = (time) => ((time % daySeconds) / hourSeconds) | 0;
 const getTimeDays = (time) => (time / daySeconds) | 0;
 
 export default function Timer() {
+  
   const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-  const { height, width } = useWindowDimensions();
+  // const { height, width } = useWindowDimensions();
 
   const remainingTime = 1621492200 - stratTime;
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
+  const [timerSize, setTimerSize] = useState(150);
+  let timerProps = {
+    isPlaying: true,
+    size: timerSize,
+    strokeWidth: 6
+  };
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+    
+    windowDimensions.width<425? setTimerSize(60) : (windowDimensions.width<600?setTimerSize(100):setTimerSize(150));
 
+    timerProps = {
+      isPlaying: true,
+      size: timerSize,
+      strokeWidth: 6
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowDimensions]);
   return (
     <React.Fragment>
 
@@ -116,9 +120,7 @@ export default function Timer() {
           }
         </CountdownCircleTimer>
       </div>
-      <div>
-        width: {width} ~ height: {height}
-      </div>
+     
     </React.Fragment>
   );
 }

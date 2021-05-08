@@ -13,6 +13,7 @@ const useStyles= makeStyles({
     root:{
         height: '100%',
         width: '100%',
+        overflowX: 'hidden',
     },
     aboutContainer:{
         padding: '50px 0 50px 150px', 
