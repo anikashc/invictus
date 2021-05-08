@@ -19,6 +19,7 @@
     /* height: 100vh; */
     text-align: center;
     display: flex;
+    align-items: center;
     color: aliceblue;
     animation: 
       typing 3.5s steps(40, end),

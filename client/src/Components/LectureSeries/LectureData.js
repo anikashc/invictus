@@ -33,7 +33,7 @@ export default function CustomizedTimeline() {
 
   return (
     <Timeline align="alternate">
-      <TimelineItem data-aos="fade-left">
+      <TimelineItem data-aos="fade-right">
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
             9:30 am
@@ -53,8 +53,8 @@ export default function CustomizedTimeline() {
             <Typography>Because you need strength</Typography>
           </Paper>
         </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
+      </TimelineItem >
+      <TimelineItem data-aos="fade-left">
         <TimelineOppositeContent data-aos="fade-right">
           <Typography variant="body2" color="textSecondary">
             10:00 am
@@ -75,7 +75,7 @@ export default function CustomizedTimeline() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem data-aos="fade-left">
+      <TimelineItem data-aos="fade-right">
         <TimelineSeparator>
           <TimelineDot color="primary" variant="outlined">
             <HotelIcon />
@@ -91,7 +91,7 @@ export default function CustomizedTimeline() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem data-aos="fade-right">
+      <TimelineItem data-aos="fade-left">
         <TimelineSeparator>
           <TimelineDot color="secondary">
             <RepeatIcon />
