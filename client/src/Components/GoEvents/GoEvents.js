@@ -13,7 +13,7 @@ const useStyles= makeStyles({
         width: '100%',
         padding: '10px',
         background: '#FFFFFF',
-        border: 'solid 10px #D66496',
+        
         '@media: (max-width: 900px)':{
           border: 'solid 8px #D66496'
         },

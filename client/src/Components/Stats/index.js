@@ -14,7 +14,7 @@ const useStyles= makeStyles({
         width: '100%',
         padding: '20px',
         background: '#FFFFFF',
-        border: 'solid 10px #D66496',
+        
         '@media: (max-width: 900px)':{
           border: 'solid 8px #D66496'
         },
@@ -28,7 +28,7 @@ const useStyles= makeStyles({
     },
     header:{  
       paddingTop: '20px',  
-    color: '#1B1430', 
+    color: '#120717', 
     fontSize: '2.5rem',
     display: 'flex',
     justifyContent: 'center',
@@ -38,7 +38,7 @@ const useStyles= makeStyles({
     },
     subtext: {
       paddingTop: '20px',  
-      color: '#D66496', 
+      color: '#120717', 
       fontSize: '2rem',
       display: 'flex',
       justifyContent: 'center',
