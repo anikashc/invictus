@@ -27,7 +27,7 @@ const useStyles= makeStyles({
     },
     header:{  
       paddingTop: '20px',  
-     color: '#1B1430', 
+    color: '#1B1430', 
     fontSize: '2.5rem',
     display: 'flex',
     justifyContent: 'center',
@@ -109,7 +109,7 @@ const GoEvents = () => {
     </div>
   </li>    
 </ul>
-        </div>
+</div>
 
 
     )

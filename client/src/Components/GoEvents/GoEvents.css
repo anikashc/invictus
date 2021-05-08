@@ -134,3 +134,16 @@
   }
 
 }
+
+@media screen and (max-width: 890px) 
+{
+ 
+  
+  .card-event {
+
+    width: 70%;
+    margin-left: 70px;
+
+  }
+
+}
