@@ -21,7 +21,7 @@ const Footer = () => {
         <footer>
         <Grid container className={classNames(classes.root,{
         [classes.sponsor] : location==='/sponsors',})}>   
-        <Grid container className={classes.footer}>
+        <Grid container className={classes.footer} data-aos="fade-up">
         <Grid item xs={4} className={classes.findus}>
           <Box className={classes.header}>FOLLOW US</Box>
           <Box className={classes.socialLinksContainer}>

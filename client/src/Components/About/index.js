@@ -3,30 +3,37 @@ import React from 'react'
 import Box from '@material-ui/core/Box';
 import Zoom from 'react-reveal/Zoom';
 
+import about_bg from '../../Assets/Backgrounds/about_bg.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const useStyles= makeStyles({
     root:{
         height: '100%',
         width: '100%',
     },
     aboutContainer:{
-        padding: '100px 0 0 150px',  
+        padding: '50px 0 50px 150px', 
+        background:  `url(${about_bg}) no-repeat`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
         '@media (max-width: 900px)':{
-          padding: '50px 0 0 100px', 
+          padding: '30px 0 30px 100px', 
         },
         '@media (max-width: 600px)':{
-          padding: '30px 0 0 0px', 
+          padding: '20px 0 20px 0px', 
         },
     },
     aboutBox:{ 
-        margin: '50px', 
-        padding: '50px',   
-        
+        padding: '50px 100px 50px 100px',
         '@media (max-width: 768px)':{
-          padding: '20px 0 20 50px',
+          padding: '20px 50px 20px 50px',
         },
         
         '@media (max-width: 600px)':{
-          padding: '10px 0 10 0px', 
+          padding: '20px', 
         },
     },
 
@@ -72,9 +79,9 @@ const About = () => {
         <div className={classes.root}>
             <div className={classes.aboutContainer}>
               <Zoom>
-               <div className={classes.aboutBox}>
+               <div className={classes.aboutBox} >
                <Box className={classes.header}>ABOUT INVICTUS</Box>
-               <Box className={classes.subtext}>
+               <Box className={classes.subtext}  data-aos="fade-left">
                INVICTUS is the annual technical fest of Delhi Technological University, formerly known as Delhi College of Engineering.
                Being one of the biggest Tech Fest of North India, it provides a platform for budding Technocrats to explore and put their talent to test when they compete with other prodigies. 
                It covers a wide range of events in technical domain with some other miscellaneous events for quizzes and ML competitions to fun games and comedy night.  
