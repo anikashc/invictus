@@ -3,6 +3,8 @@
 # dependencies
 /node_modules
 node_modules/
+_redirects
+netlify.toml
 /.pnp
 .pnp.js
 .eslintcache
