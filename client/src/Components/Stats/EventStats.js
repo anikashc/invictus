@@ -7,7 +7,7 @@ const EventStats = () => {
         start: 0,
         end: 30,
         delay: 0,
-        duration: 5,
+        duration: 2,
         onReset: () => {
             start()
         },
