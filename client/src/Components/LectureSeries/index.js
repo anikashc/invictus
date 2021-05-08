@@ -8,6 +8,10 @@ const useStyles= makeStyles({
     root:{
         height: '100%',
         width: '100%',
+        paddingTop: '20px',
+        '@media (min-width: 600px)':{
+        padding: '10%',
+        }
     },
     header:{  
         paddingTop: '20px',  

@@ -14,6 +14,11 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '6px 16px',
@@ -28,7 +33,7 @@ export default function CustomizedTimeline() {
 
   return (
     <Timeline align="alternate">
-      <TimelineItem>
+      <TimelineItem data-aos="fade-left">
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
             9:30 am
@@ -50,7 +55,7 @@ export default function CustomizedTimeline() {
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent>
+        <TimelineOppositeContent data-aos="fade-right">
           <Typography variant="body2" color="textSecondary">
             10:00 am
           </Typography>
@@ -70,7 +75,7 @@ export default function CustomizedTimeline() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
+      <TimelineItem data-aos="fade-left">
         <TimelineSeparator>
           <TimelineDot color="primary" variant="outlined">
             <HotelIcon />
@@ -86,7 +91,7 @@ export default function CustomizedTimeline() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
+      <TimelineItem data-aos="fade-right">
         <TimelineSeparator>
           <TimelineDot color="secondary">
             <RepeatIcon />

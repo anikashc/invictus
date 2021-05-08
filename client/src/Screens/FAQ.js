@@ -2,7 +2,10 @@ import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core'
 import FaqList from '../Components/FaqList/FaqList';
 import Box from '@material-ui/core/Box';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 const useStyles= makeStyles({
     root:{
         background: '#1B1430',/* fallback for old browsers */
@@ -69,7 +72,7 @@ const FAQ = () => {
 
     return (
         <div className={classes.root}>
-        <div className="faq-section">
+        <div className="faq-section" data-aos="fade-up">
             <Box className={classes.header}>F . A . Q</Box>
             <div className="faq-list">
                 {faqs.map((faq, index) => (

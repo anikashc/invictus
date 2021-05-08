@@ -3,6 +3,11 @@ import React from 'react'
 import ParticipantStats from './ParticipantsStats'
 import EventStats from './EventStats'
 import Box from '@material-ui/core/Box';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const useStyles= makeStyles({
     root:{
         height: '100%',

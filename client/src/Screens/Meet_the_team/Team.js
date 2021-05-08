@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
 import './Team.css';
 import TeamData from './TeamData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 
 const useStyles= makeStyles({
@@ -38,7 +42,7 @@ const classes=useStyles();
 
                     return (
                         <>
-                            <div className="card" style={{ backgroundImage: `url(${val.imgsrc})` }} >
+                            <div className="card"  data-aos="zoom-in" style={{ backgroundImage: `url(${val.imgsrc})`}} >
                                 <div className="content">
                                     <h2 className="title">{val.designation} </h2>
                                     <p className="copy"> {val.MebName}</p>

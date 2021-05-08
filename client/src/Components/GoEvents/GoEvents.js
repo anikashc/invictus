@@ -2,6 +2,10 @@ import React from 'react'
 import './GoEvents.css'
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const useStyles= makeStyles({
     root:{
@@ -41,7 +45,7 @@ const GoEvents = () => {
           <Box className={classes.header}>GLIMPSE OF EVENTS</Box>
         <ul class="cards-event">
   <li>
-    <div href="" class="card-event">
+    <div data-aos="fade-up" href="" class="card-event">
       <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
@@ -57,7 +61,7 @@ const GoEvents = () => {
     </div>      
   </li>
   <li>
-    <div href="" class="card-event">
+    <div data-aos="fade-up" href="" class="card-event">
       <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
       <div class="card__overlay">        
         <div class="card__header">
@@ -73,7 +77,7 @@ const GoEvents = () => {
     </div>
   </li>
   <li>
-    <div href="" class="card-event">
+    <div data-aos="fade-up" href="" class="card-event">
       <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
@@ -89,7 +93,7 @@ const GoEvents = () => {
     </div>
   </li>
   <li>
-    <div href="" class="card-event">
+    <div data-aos="fade-up" href="" class="card-event">
       <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">

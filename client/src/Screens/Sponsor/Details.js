@@ -8,6 +8,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import SponsorData from './SponsorData'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
+
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -50,9 +54,9 @@ export default function Album(props) {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
-        <div className={classes.heroContent} 
+        <div className={classes.heroContent} data-aos="fade-up"
         style={{backgroundColor:"transparent", position:"relative"}}>
-          <Container maxWidth="md">
+          <Container maxWidth="md" >
             <Typography component="h2" variant="h2" align="center" color="white" gutterBottom>
               Sponsor Us
             </Typography>
@@ -81,7 +85,7 @@ export default function Album(props) {
           <Grid container spacing={4}>
             {SponsorData.map(sponsor => (
               <Grid item key={sponsor} xs={12} sm={6} md={4}>
-                <Card className={classes.card} key={sponsor.id}>
+                <Card data-aos="zoom-out"  className={classes.card} key={sponsor.id}>
                   <CardMedia
                     className={classes.cardMedia}
                     image={sponsor.imgsrc}
