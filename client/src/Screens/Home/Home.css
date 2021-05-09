@@ -33,9 +33,10 @@ li:hover .span {
   color: #ffffff7c;
   position: fixed;
   z-index: 100;
+  mix-blend-mode: difference;
 }
 .active {
-  /* text-decoration: underline; */
+  
   color: #fffffff6;
 }
 .active .span {
