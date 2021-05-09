@@ -9,6 +9,34 @@ export const useStyles = makeStyles({
       width: '100%',
       paddingTop: '120px',  
   },
+  
+  header:{  
+    color: '#FFFFFF', 
+    display: 'flex',
+    justifyContent: 'center',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: '4rem',
+    textAlign: 'center',
+    fontFamily: 'Rajdhani',
+    lineHeight:'30px',
+    '@media (max-width: 1130px)':{
+      fontSize: '3.5rem',    
+      lineHeight:'20px',
+    },
+    '@media (max-width: 1024px)':{
+    fontSize: '3rem',    
+    lineHeight:'15px',
+  },
+  '@media (max-width: 768px)':{
+    fontSize: '2.5rem',    
+    lineHeight:'10px',
+  },
+  },
+  buttons:{
+    paddingTop: '50px',
+  },
   button: {
     background:'#D66496',
     fontFamily: 'Rajdhani',

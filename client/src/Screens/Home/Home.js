@@ -60,7 +60,6 @@ const Home = () => {
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
                 <li><Link  to="mentors" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Mentors</span></Link></li>
-                <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Stats</span></Link></li>
                 <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Prizes</span></Link></li>
                 <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Glimpse Of Events</span></Link></li>
                 <li><Link  to="lseries" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Lecture Series</span></Link></li>
