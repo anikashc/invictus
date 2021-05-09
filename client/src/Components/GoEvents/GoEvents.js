@@ -26,7 +26,7 @@ const useStyles= makeStyles({
         },
     },
     header:{  
-      paddingTop: '20px',  
+    paddingTop: '20px',  
     color: '#1B1430', 
     fontSize: '2.5rem',
     display: 'flex',
@@ -46,7 +46,7 @@ const GoEvents = () => {
         <ul class="cards-event">
   <li>
     <div data-aos="fade-up" href="" class="card-event">
-      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+      <img src="https://images.pexels.com/photos/2952834/pexels-photo-2952834.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
@@ -62,7 +62,7 @@ const GoEvents = () => {
   </li>
   <li>
     <div data-aos="fade-up" href="" class="card-event">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src="https://images.pexels.com/photos/7647922/pexels-photo-7647922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card__image" alt="" />
       <div class="card__overlay">        
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
@@ -78,7 +78,7 @@ const GoEvents = () => {
   </li>
   <li>
     <div data-aos="fade-up" href="" class="card-event">
-      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+      <img src="https://images.pexels.com/photos/594233/pexels-photo-594233.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
@@ -94,7 +94,7 @@ const GoEvents = () => {
   </li>
   <li>
     <div data-aos="fade-up" href="" class="card-event">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src="https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 

@@ -4,10 +4,12 @@
 }
 
 
+  
+
 
 .body {
   font-family: 'Noto Sans JP', sans-serif;
-  
+  box-sizing: border-box;
 }
 
 .cards-event {
@@ -23,7 +25,6 @@
   position: relative;
   display: block;
   height: 100%;  
-  width: 90%;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
@@ -31,7 +32,7 @@
 
 .card__image {      
   width: 100%;
-  height: auto;
+  height: 18em;
 }
 
 .card__overlay {
@@ -55,7 +56,7 @@
   display: flex;
   align-items: center;
   gap: 2em;
-  padding: .3em;
+  padding: 1em;
   border-radius: calc(var(--curve) * 1px) 0 0 0;    
   background-color: var(--surface-color);
   transform: translateY(-100%);
@@ -73,22 +74,13 @@
 
 .card__arc path {
   fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }       
 
-.card-event:hover .card__header { 
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+.card-event:hover .card__header {
+  transform: translateY(0);
 }
 
-@media screen and (max-width: 1465px) and (min-width:900px) {
-
-  .cards-event
-  {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  }
-
-}
 .card__thumb {
   flex-shrink: 0;
   width: 50px;
@@ -126,7 +118,8 @@
   overflow: hidden;
 }    
 
-@media screen and (max-width: 1465px) and (min-width:1250px) {
+
+@media screen and (max-width: 1465px) and (min-width:900px) {
 
   .cards-event
   {
@@ -134,15 +127,50 @@
   }
 
 }
+  
 
-@media screen and (max-width: 890px) 
+
+@media screen and (max-width: 700px) and (min-width: 500)
+{
+ 
+  
+  .card__image {
+
+    height: 17em;
+
+  }
+
+}
+
+@media screen and (min-width: 1500px)
+{
+ 
+  
+  .card__image {
+
+    height: 23em;
+
+  }
+
+}
+
+@media screen and (max-width: 740px)  and (min-width: 580px)
+{
+  .card__image {
+
+    height: 20em;
+
+  }
+}
+
+@media screen and (max-width: 899px) 
 {
  
   
   .card-event {
 
     width: 70%;
-    margin-left: 70px;
+    margin-left: 15%;
 
   }
 
