@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import Box from '@material-ui/core/Box';
 import Zoom from 'react-reveal/Zoom';
-
+import Stats from './Stats/index'
 import about_bg from '../../Assets/Backgrounds/about_bg.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,6 +14,7 @@ const useStyles= makeStyles({
         height: '100%',
         width: '100%',
         overflowX: 'hidden',
+        backround: '#FFFFFF',
     },
     aboutContainer:{
         padding: '50px 0 50px 150px', 
@@ -39,7 +40,7 @@ const useStyles= makeStyles({
 
     header:{  
       paddingTop: '20px',
-      color: '#FFFFFF', 
+      color: '#1B1430', 
       fontSize: '4rem',
       textAlign: 'center',
       fontFamily: 'Rajdhani',
@@ -60,7 +61,7 @@ const useStyles= makeStyles({
     },
   },
       subtext: {
-        color: '#FFFFFF', 
+        color: '#1B1430', 
         paddingTop: '60px',
         fontSize: '1.5rem',
         fontFamily: 'Rajdhani',
@@ -88,11 +89,11 @@ const About = () => {
                Being one of the biggest Tech Fest of North India, it provides a platform for budding Technocrats to explore and put their talent to test when they compete with other prodigies. 
                It covers a wide range of events in technical domain with some other miscellaneous events for quizzes and ML competitions to fun games and comedy night.  
                </Box>
-               
               </Zoom>
               </div>
                
-            </div>
+            </div>  
+            <Stats/>
         </div>
     )
 }

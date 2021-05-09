@@ -14,6 +14,9 @@ AOS.init()
 
 
 const useStyles = makeStyles(theme => ({
+  root:{ 
+    overflowX: 'hidden',
+  },
   icon: {
     marginRight: theme.spacing(2),
   },
@@ -54,6 +57,7 @@ export default function Album(props) {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
+        <div className={classes.root}>
         <div className={classes.heroContent} data-aos="fade-up"
         style={{backgroundColor:"transparent", position:"relative"}}>
           <Container maxWidth="md" >
@@ -97,6 +101,8 @@ export default function Album(props) {
           </Grid>
         </Container>
       
+        </div>
+        
     </React.Fragment>
   );
 }
