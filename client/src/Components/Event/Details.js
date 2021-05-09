@@ -1,14 +1,13 @@
 import React from "react";
 import eventsData from "../../Assets/EventsData";
 import { Grid } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
 import Breadcrumb from "./Breadcrumb";
 
 const Details = ({ id }) => {
     const detail = eventsData[id].description;
     return (
-        <div style={{ flexGrow: 1, marginTop: "3rem" }}>
-            <Grid container spacing={3}>
+        <div style={{ flexGrow: 1, marginTop: "4rem" }}>
+            <Grid container spacing={0}>
                 <Grid item xs={12}>
                     <Breadcrumb id={id} />
                 </Grid>
