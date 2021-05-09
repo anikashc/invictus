@@ -16,6 +16,7 @@ const useStyles= makeStyles({
         background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         height: '100%',
         width: '100%',
+        paddingTop: '80px',
         '@media: (max-width: 800px)': {
         paddingTop: '20%',
         }

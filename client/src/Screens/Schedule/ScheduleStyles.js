@@ -23,7 +23,7 @@ export const useStyles = makeStyles({
       },
     }
   },header:{  
-    paddingTop: '20px',
+    paddingTop: '30px',
     color: '#FFFFFF', 
     fontSize: '4rem',
     textAlign: 'center',
