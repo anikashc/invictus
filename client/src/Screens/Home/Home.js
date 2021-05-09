@@ -3,6 +3,7 @@ import './Home.css'
 import { makeStyles } from '@material-ui/core';
 import GoEvents from '../../Components/GoEvents/GoEvents'
 import Prizes from '../../Components/Prizes';
+import Mentors from '../../Components/Mentors';
 import WhatsNewModal from '../../Components/WhatsNewModal/WhatsNewModal';
 import LectureSeries from '../../Components/LectureSeries';
 import main_bg from '../../Assets/Videos/try2.mp4'
@@ -58,12 +59,12 @@ const Home = () => {
             <div className="pagination" >
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
-                <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>
+                <li><Link  to="mentors" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Mentors</span></Link></li>
                 <li><Link  to="stats" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Stats</span></Link></li>
                 <li><Link  to="prizes" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Prizes</span></Link></li>
                 <li><Link  to="goevents" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Glimpse Of Events</span></Link></li>
                 <li><Link  to="lseries" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Lecture Series</span></Link></li>
-
+                <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>
               </ul>
             </div>
             
@@ -93,8 +94,8 @@ const Home = () => {
             </div>
             <div className={classes.root}>
                 <WhatsNewModal/>
-                <div id="about">
-                  <About className="page"/>
+                <div id="mentors">
+                  <Mentors/>
                 </div>
                 
                 <div id="stats" > 
@@ -109,6 +110,10 @@ const Home = () => {
                 <div id="lseries">
                   <LectureSeries className="page" />
                 </div>
+                <div id="about">
+                  <About className="page"/>
+                </div>
+                
             </div>
             
 

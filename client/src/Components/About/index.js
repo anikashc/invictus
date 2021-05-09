@@ -14,6 +14,7 @@ const useStyles= makeStyles({
         height: '100%',
         width: '100%',
         overflowX: 'hidden',
+        backround: '#FFFFFF',
     },
     aboutContainer:{
         padding: '50px 0 50px 150px', 
@@ -39,7 +40,7 @@ const useStyles= makeStyles({
 
     header:{  
       paddingTop: '20px',
-      color: '#FFFFFF', 
+      color: '#1B1430', 
       fontSize: '4rem',
       textAlign: 'center',
       fontFamily: 'Rajdhani',
@@ -60,7 +61,7 @@ const useStyles= makeStyles({
     },
   },
       subtext: {
-        color: '#FFFFFF', 
+        color: '#1B1430', 
         paddingTop: '60px',
         fontSize: '1.5rem',
         fontFamily: 'Rajdhani',
