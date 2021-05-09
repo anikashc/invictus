@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
-
+import LazyLoad from 'react-lazy-load'
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -81,11 +81,6 @@ export default function WhatsNewModel() {
   },[open]);
 
 
-
-  const handleOpen = () => {
-    
-  };
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -106,7 +101,13 @@ export default function WhatsNewModel() {
       >
         <Fade in={open}>
           <div >
-            <img src="https://picsum.photos/600" alt="1" className={classes.paper}/>
+            <LazyLoad 
+          
+              debounce={false}
+              onContentVisible={() => console.log('look ma I have been lazyloaded!')}
+            >
+            <img src="https://picsum.photos/600" alt="What's New" className={classes.paper}/>
+            </LazyLoad>
           </div>
         </Fade>
       </Modal>

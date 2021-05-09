@@ -15,12 +15,11 @@ import { Typography } from '@material-ui/core';
 import './temp.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+const {REACT_APP_CLIENT_ID, REACT_APP_API_KEY} = process.env;
 
 AOS.init();
 
 var gapi = window.gapi
-var CLIENT_ID = "330193745873-b5lbss2q1259qat4ja36ti4m497395ij.apps.googleusercontent.com"
-var API_KEY = "AIzaSyCso4ndaDt5vQKH9kz_m5lwCMVkw3jLKi8"
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
 var SCOPES = "https://www.googleapis.com/auth/calendar.events"
 
@@ -28,8 +27,8 @@ const handleClick = (i) => {
   gapi.load('client:auth2', () => {
     console.log('Loaded Client')
     gapi.client.init({
-      apiKey: API_KEY,
-      clientId: CLIENT_ID,
+      clientId: REACT_APP_CLIENT_ID,
+      apiKey: REACT_APP_API_KEY,
       discoveryDocs: DISCOVERY_DOCS,
       scope: SCOPES,
     })
