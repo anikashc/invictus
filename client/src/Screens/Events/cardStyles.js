@@ -6,6 +6,9 @@ export const useStyles = makeStyles({
     width: 200,
     height: 350,
     transition: 'height 0.2s, width 0.2s',
+    '@media (max-width: 600px)':{
+      paddingTop: '20%',
+    },
     "&:hover": {
       height: 330,
       width: 190,

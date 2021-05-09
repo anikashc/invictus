@@ -14,7 +14,7 @@ export const useStyles = makeStyles({
     background: '#FFFFFF',
   },
   footer: {
-    background: `url(${footer_bg}) no-repeat`,
+    background: `url(https://github.com/anikashc/invictus/raw/master/client/src/Assets/Backgrounds/footer_bg.png) no-repeat`,
     backgroundSize: 'cover',
   },
   subtext: {//web view

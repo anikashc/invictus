@@ -20,9 +20,10 @@ const useStyles= makeStyles({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        background: '#FFFFFF',
     },header:{  
         paddingTop: '20px',
-        color: '#FFFFFF', 
+        color: '#1B1430', 
         fontSize: '4rem',
         textAlign: 'center',
         fontFamily: 'Rajdhani',

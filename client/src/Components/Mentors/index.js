@@ -1,8 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import Box from '@material-ui/core/Box';
-// import './Lecture.css';
-import CustomizedTimeline from './LectureData';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -10,13 +8,12 @@ AOS.init();
 
 const useStyles= makeStyles({
     root:{
-        height: '100%',
+        height: '100vh',
         width: '100%',
         overflowX: 'hidden',
-        background: '#FFFFFF',
     },header:{  
         paddingTop: '20px',
-        color: '#1B1430', 
+        color: '#FFFFFF', 
         fontSize: '4rem',
         textAlign: 'center',
         fontFamily: 'Rajdhani',
@@ -37,16 +34,13 @@ const useStyles= makeStyles({
     },
 })
 
-const LectureSeries = () => {
+const Mentors = () => {
     const classes= useStyles();
     return (
         <div className={classes.root}>
-              <Box className={classes.header} data-aos="zoom-in">LECTURE SERIES</Box>
-              <div id= "Lec">
-              <CustomizedTimeline></CustomizedTimeline>
-              </div>
+              <Box className={classes.header} data-aos="zoom-in">OUR MENTORS</Box>
         </div>
     )
 }
 
-export default LectureSeries
+export default Mentors
