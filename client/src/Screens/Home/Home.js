@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core';
 import GoEvents from '../../Components/GoEvents/GoEvents'
 import Prizes from '../../Components/Prizes';
 import WhatsNewModal from '../../Components/WhatsNewModal/WhatsNewModal';
-import Stats from '../../Components/Stats';
 import LectureSeries from '../../Components/LectureSeries';
 import main_bg from '../../Assets/Videos/try2.mp4'
 import {Link} from 'react-scroll'
@@ -99,7 +98,6 @@ const Home = () => {
                 </div>
                 
                 <div id="stats" > 
-                  <Stats className="page" ref={ref}/>
                 </div>
                 
                 <div id="prizes">
