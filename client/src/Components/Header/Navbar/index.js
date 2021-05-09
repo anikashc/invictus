@@ -19,7 +19,7 @@ export default function Navbar(props) {
             <Link to="/">
 
               <img 
-                src = {logo} 
+                src = 'https://github.com/anikashc/invictus/raw/master/client/src/Assets/Logos/logo.svg'
                 className = {classes.image}
               />
 

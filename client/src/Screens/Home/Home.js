@@ -71,10 +71,11 @@ const Home = () => {
             <div className={classes.home} id="home">
               
               <video 
-              src={main_bg} 
+              src='https://github.com/anikashc/invictus/raw/master/client/src/Assets/Videos/try2.mp4' 
               autoplay="true" 
               loop="true" 
               muted="true"
+              preload="auto"
               style = {{
                 objectFit: 'cover',
                 width: '100%',
