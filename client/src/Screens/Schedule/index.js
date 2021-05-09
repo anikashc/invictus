@@ -13,6 +13,10 @@ import {
 import { useStyles } from './ScheduleStyles';
 import { Typography } from '@material-ui/core';
 import './temp.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 var gapi = window.gapi
 var CLIENT_ID = "330193745873-b5lbss2q1259qat4ja36ti4m497395ij.apps.googleusercontent.com"
@@ -204,13 +208,13 @@ function App () {
     <div className={classes.holder}>
     <Grid container justify='center' align='center' style = {{minHeight:'100vh'}}>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} data-aos="zoom-in">
         <Typography
           className = {classes.header}
           variant='h5'
           gutterBottom
         >
-          Schedule
+          SCHEDULE
         </Typography>
       </Grid>
 

@@ -13,18 +13,30 @@ const useStyles= makeStyles({
         background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
         height: '100vh',
         width: '100%',
-    },
-    header:{  
-        paddingTop: '150px',
-        
+        '@media: (max-width: 800px)': {
+            paddingTop: '20%',
+            }
+    },header:{  
+        paddingTop: '20px',
         color: '#FFFFFF', 
-        fontSize: '2.5rem',
-        display: 'flex',
-        justifyContent: 'center',
+        fontSize: '4rem',
+        textAlign: 'center',
         fontFamily: 'Rajdhani',
         fontStyle: 'normal',
         fontWeight: 'bold',
-        }
+        '@media (max-width: 1130px)':{
+          fontSize: '3.5rem',    
+          lineHeight:'20px',
+        },
+        '@media (max-width: 1024px)':{
+        fontSize: '3rem',    
+        lineHeight:'15px',
+      },
+      '@media (max-width: 768px)':{
+        fontSize: '2.5rem',    
+        lineHeight:'10px',
+      },
+    },
 })
 
 
@@ -72,9 +84,9 @@ const FAQ = () => {
 
     return (
         <div className={classes.root}>
-        <div className="faq-section" data-aos="fade-up">
-            <Box className={classes.header}>F . A . Q</Box>
-            <div className="faq-list">
+        <div className="faq-section" >
+            <Box className={classes.header} data-aos="zoom=in">F . A . Q</Box>
+            <div className="faq-list" data-aos="fade-up">
                 {faqs.map((faq, index) => (
                     <FaqList
                         faq={faq}

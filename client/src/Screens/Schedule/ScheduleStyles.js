@@ -22,14 +22,25 @@ export const useStyles = makeStyles({
         backgroundColor: 'rgba(255,20,20,.2)'
       },
     }
-  },
-  header:{  
+  },header:{  
+    paddingTop: '20px',
     color: '#FFFFFF', 
-    fontSize: '2.5rem',
-    display: 'flex',
-    justifyContent: 'center',
+    fontSize: '4rem',
+    textAlign: 'center',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
-    }
+    '@media (max-width: 1130px)':{
+      fontSize: '3.5rem',    
+      lineHeight:'20px',
+    },
+    '@media (max-width: 1024px)':{
+    fontSize: '3rem',    
+    lineHeight:'15px',
+  },
+  '@media (max-width: 768px)':{
+    fontSize: '2.5rem',    
+    lineHeight:'10px',
+  },
+},
 });

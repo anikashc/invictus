@@ -16,17 +16,30 @@ const useStyles= makeStyles({
         background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         height: '100%',
         width: '100%',
+        '@media: (max-width: 800px)': {
+        paddingTop: '20%',
+        }
+    },header:{  
+        paddingTop: '20px',
+        color: '#FFFFFF', 
+        fontSize: '4rem',
+        textAlign: 'center',
+        fontFamily: 'Rajdhani',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        '@media (max-width: 1130px)':{
+          fontSize: '3.5rem',    
+          lineHeight:'20px',
+        },
+        '@media (max-width: 1024px)':{
+        fontSize: '3rem',    
+        lineHeight:'15px',
+      },
+      '@media (max-width: 768px)':{
+        fontSize: '2.5rem',    
+        lineHeight:'10px',
+      },
     },
-    header:{  
-      paddingTop: '130px',  
-      color: '#FFFFFF', 
-      fontSize: '3rem',
-      display: 'flex',
-      justifyContent: 'center',
-      fontFamily: 'Rajdhani',
-      fontStyle: 'normal',
-      fontWeight: 'bold',
-      }
 })
 
 
@@ -36,7 +49,7 @@ const classes=useStyles();
     return (
         <div className={classes.root}>
 
-            <Box className={classes.header}>MEET THE TEAM</Box>
+            <Box className={classes.header} data-aos="zoom-in">MEET THE TEAM</Box>
             <main className="page-content">
                 {TeamData.map((val) => {
 

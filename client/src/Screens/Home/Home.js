@@ -56,7 +56,7 @@ const Home = () => {
     return (
         <React.Fragment>
             
-            <div className="pagination">
+            <div className="pagination" >
               <ul>
                 <li><Link activeClass="active" to="home" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>Home</span></Link></li>
                 <li><Link  to="about" spy={true} smooth={true}><RadioButtonCheckedIcon /> <span className='span' id='litext'>About</span></Link></li>

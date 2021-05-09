@@ -52,7 +52,7 @@ export default function Timer() {
       setWindowDimensions(getWindowDimensions());
     }
     
-    windowDimensions.width<425? setTimerSize(60) : (windowDimensions.width<600?setTimerSize(100):setTimerSize(150));
+    windowDimensions.width<425? setTimerSize(60) : (windowDimensions.width<600?setTimerSize(100):setTimerSize(120));
 
     timerProps = {
       isPlaying: true,

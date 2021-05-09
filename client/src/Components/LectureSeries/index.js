@@ -3,34 +3,44 @@ import React from 'react'
 import Box from '@material-ui/core/Box';
 // import './Lecture.css';
 import CustomizedTimeline from './LectureData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const useStyles= makeStyles({
     root:{
         height: '100%',
         width: '100%',
-        paddingTop: '20px',
         overflowX: 'hidden',
-        '@media (min-width: 600px)':{
-        padding: '10%',
-        }
-    },
-    header:{  
-        paddingTop: '20px',  
-      fontSize: '2.5rem',
-      color: '#FFFFFF',
-      display: 'flex',
-      justifyContent: 'center',
-      fontFamily: 'Rajdhani',
-      fontStyle: 'normal',
-      fontWeight: 'bold',
+    },header:{  
+        paddingTop: '20px',
+        color: '#FFFFFF', 
+        fontSize: '4rem',
+        textAlign: 'center',
+        fontFamily: 'Rajdhani',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        '@media (max-width: 1130px)':{
+          fontSize: '3.5rem',    
+          lineHeight:'20px',
+        },
+        '@media (max-width: 1024px)':{
+        fontSize: '3rem',    
+        lineHeight:'15px',
       },
+      '@media (max-width: 768px)':{
+        fontSize: '2.5rem',    
+        lineHeight:'10px',
+      },
+    },
 })
 
 const LectureSeries = () => {
     const classes= useStyles();
     return (
         <div className={classes.root}>
-              <Box className={classes.header}>LECTURE SERIES</Box>
+              <Box className={classes.header} data-aos="zoom-in">LECTURE SERIES</Box>
               <div id= "Lec">
               <CustomizedTimeline></CustomizedTimeline>
               </div>

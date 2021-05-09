@@ -13,27 +13,31 @@ const useStyles= makeStyles({
         width: '100%',
         padding: '10px',
         background: '#FFFFFF',
-        
-        '@media: (max-width: 900px)':{
-          border: 'solid 8px #D66496'
-        },
-        
-        '@media: (max-width: 600px)':{
-          border: 'solid 6px #D66496'
-        },
-        '@media: (max-width: 425px)':{
-          border: 'solid 4px #D66496'
-        },
     },
     header:{  
     paddingTop: '20px',  
     color: '#1B1430', 
-    fontSize: '2.5rem',
     display: 'flex',
     justifyContent: 'center',
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
+    fontSize: '4rem',
+    textAlign: 'center',
+    fontFamily: 'Rajdhani',
+    lineHeight:'30px',
+    '@media (max-width: 1130px)':{
+      fontSize: '3.5rem',    
+      lineHeight:'20px',
+    },
+    '@media (max-width: 1024px)':{
+    fontSize: '3rem',    
+    lineHeight:'15px',
+  },
+  '@media (max-width: 768px)':{
+    fontSize: '2.5rem',    
+    lineHeight:'10px',
+  },
     },
 })
 
@@ -42,7 +46,7 @@ const GoEvents = () => {
 
     return (
         <div class="body" className={classes.root}>
-          <Box className={classes.header}>GLIMPSE OF EVENTS</Box>
+          <Box className={classes.header} data-aos="zoom-in">GLIMPSE OF EVENTS</Box>
         <ul class="cards-event">
   <li>
     <div data-aos="fade-up" href="" class="card-event">

@@ -20,6 +20,9 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: '10%',
+  },
   paper: {
     padding: '6px 16px',
   },
@@ -32,7 +35,8 @@ export default function CustomizedTimeline() {
   const classes = useStyles();
 
   return (
-    <Timeline align="alternate">
+    <div className={classes.root}>
+      <Timeline align="alternate">
       <TimelineItem data-aos="fade-right">
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
@@ -107,6 +111,8 @@ export default function CustomizedTimeline() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </div>
+    
   );
 }
 // export default CustomizedTimeline;

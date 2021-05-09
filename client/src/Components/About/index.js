@@ -17,7 +17,6 @@ const useStyles= makeStyles({
     },
     aboutContainer:{
         padding: '50px 0 50px 150px', 
-        background:  `url(${about_bg}) no-repeat`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         '@media (max-width: 900px)':{
@@ -28,7 +27,7 @@ const useStyles= makeStyles({
         },
     },
     aboutBox:{ 
-        padding: '50px 100px 50px 100px',
+        padding: '30px 100px 30px 100px',
         '@media (max-width: 768px)':{
           padding: '20px 50px 20px 50px',
         },
@@ -39,23 +38,24 @@ const useStyles= makeStyles({
     },
 
     header:{  
+      paddingTop: '20px',
       color: '#FFFFFF', 
-      fontSize: '2.5rem',
-      textAlign: 'left',
+      fontSize: '4rem',
+      textAlign: 'center',
       fontFamily: 'Rajdhani',
       fontStyle: 'normal',
       fontWeight: 'bold',
       lineHeight:'30px',
       '@media (max-width: 1130px)':{
-        fontSize: '2rem',    
+        fontSize: '3.5rem',    
         lineHeight:'20px',
       },
       '@media (max-width: 1024px)':{
-      fontSize: '1.8rem',    
+      fontSize: '3rem',    
       lineHeight:'15px',
     },
     '@media (max-width: 768px)':{
-      fontSize: '1.5rem',    
+      fontSize: '2.5rem',    
       lineHeight:'10px',
     },
   },
@@ -77,18 +77,20 @@ const useStyles= makeStyles({
 const About = () => {
     const classes= useStyles();
     return (
-        <div className={classes.root}>
+        <div className={classes.root}>    
             <div className={classes.aboutContainer}>
+              
+          <Box className={classes.header} data-aos="zoom-in">ABOUT INVICTUS</Box>
+            <div className={classes.aboutBox} >
               <Zoom>
-               <div className={classes.aboutBox} >
-               <Box className={classes.header}>ABOUT INVICTUS</Box>
                <Box className={classes.subtext}  data-aos="fade-left">
                INVICTUS is the annual technical fest of Delhi Technological University, formerly known as Delhi College of Engineering.
                Being one of the biggest Tech Fest of North India, it provides a platform for budding Technocrats to explore and put their talent to test when they compete with other prodigies. 
                It covers a wide range of events in technical domain with some other miscellaneous events for quizzes and ML competitions to fun games and comedy night.  
                </Box>
-              </div>
+               
               </Zoom>
+              </div>
                
             </div>
         </div>
