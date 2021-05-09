@@ -3,11 +3,11 @@ li {
   margin: 0 0 10px 0;
 }
 #litext {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .span {
-  display:none;
+  display: none;
 }
 
 li:hover {
@@ -31,18 +31,137 @@ li:hover .span {
   line-height: 108.8%;
   letter-spacing: 0.1em;
   color: #ffffff7c;
+  position: fixed;
+  z-index: 100;
+  mix-blend-mode: difference;
 }
 .active {
-  /* text-decoration: underline; */
+  
   color: #fffffff6;
 }
 .active .span {
   display: contents;
+}
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.10em; /* Adjust as needed */
+  z-index: 1;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.10em; /* Adjust as needed */
+  z-index: 1;
+  font-family: 'Rajdhani';
+  font-size: 1000%;
+  font-weight: 1000;
+  position: relative;
+  /* height: 100vh; */
+  text-align: center;
+  display: flex;
+  color: aliceblue;
+ 
+}
+
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.10em; /* Adjust as needed */
+  z-index: 1;
+  font-family: 'Rajdhani';
+  font-size: 300%;
+  font-weight: 600;
+  position: relative;
+  text-align: inherit;
+  display: flex;
+  color: aliceblue;
+  
+}
+
+@media only screen and (max-width: 1200px) {
+  .typewriter {
+    letter-spacing: 0.12em; /* Adjust as needed */
+  }
+  .typewriter h1 {
+    
+    letter-spacing: 0.12em; /* Adjust as needed */
+    font-size: 800%;
+    font-weight: 1000;
+  }
+
+  .typewriter h2 {
+    letter-spacing: 0.2em; /* Adjust as needed */
+    font-size: 300%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pagination {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+
+  .typewriter {
+    letter-spacing: 0.1em; /* Adjust as needed */
+  }
+  .typewriter h1 {
+ 
+    letter-spacing: 0.1em; /* Adjust as needed */
+    font-size: 700%;
+    font-weight: 1000;
+    position: relative;
+  }
+
+  .typewriter h2 {
+    letter-spacing: 0.08em; /* Adjust as needed */
+    font-size: 200%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .pagination {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
+  }
+
+  .typewriter {
+    letter-spacing: 0.05em; /* Adjust as needed */
+  }
+  .typewriter h1 {
+    letter-spacing: 0.05em; /* Adjust as needed */
+    font-size: 500%;
+    font-weight: 800;
+  }
+
+  .typewriter h2 {
+    letter-spacing: 0.04em; /* Adjust as needed */
+    font-size: 200%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .pagination {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+
+  .typewriter {
+    letter-spacing: 0.03em; /* Adjust as needed */
+  }
+  .typewriter h1 {
+   
+    letter-spacing: 0.03em; /* Adjust as needed */
+    font-size: 400%;
+    font-weight: 800;
+  }
+
+  .typewriter h2 {
+    letter-spacing: 0.02em; /* Adjust as needed */
+    font-size: 200%;
   }
 }

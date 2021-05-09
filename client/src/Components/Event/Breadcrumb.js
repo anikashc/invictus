@@ -11,7 +11,11 @@ export default function Breadcrumb({ id }) {
             <Link color="inherit" href="/events">
                 Events
             </Link>
-            <Link color="inherit" href={`/events/${id}`} aria-current="page">
+            <Link
+                href={`/events/${id}`}
+                aria-current="page"
+                style={{ color: "#EE81B2" }}
+            >
                 {id.slice(0, 1).toUpperCase() + id.slice(1)}
             </Link>
         </Breadcrumbs>

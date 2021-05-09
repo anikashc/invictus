@@ -2,27 +2,41 @@ import { React, useState } from 'react';
 import { makeStyles } from '@material-ui/core'
 import FaqList from '../Components/FaqList/FaqList';
 import Box from '@material-ui/core/Box';
-import faq_bg from '../Assets/Backgrounds/faq_bg.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 const useStyles= makeStyles({
     root:{
         background: '#1B1430',/* fallback for old browsers */
         background: '-webkit-linear-gradient(to top, #3c1053, #ad5389)', /* Chrome 10-25, Safari 5.1-6 */
-        background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+        background: 'linear-gradient(to top,#642A7F, #1B1430)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
         height: '100vh',
         width: '100%',
+        '@media: (max-width: 800px)': {
+            paddingTop: '20%',
+            }
+    },header:{  
+        paddingTop: '20px',
+        color: '#FFFFFF', 
+        fontSize: '4rem',
+        textAlign: 'center',
+        fontFamily: 'Rajdhani',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        '@media (max-width: 1130px)':{
+          fontSize: '3.5rem',    
+          lineHeight:'20px',
+        },
+        '@media (max-width: 1024px)':{
+        fontSize: '3rem',    
+        lineHeight:'15px',
+      },
+      '@media (max-width: 768px)':{
+        fontSize: '2.5rem',    
+        lineHeight:'10px',
+      },
     },
-    header:{  
-        paddingTop: '110px',  
-      color: '#FFFFFF', 
-      fontSize: '2.5rem',
-      display: 'flex',
-      justifyContent: 'center',
-      fontFamily: 'Rajdhani',
-      fontStyle: 'normal',
-      fontWeight: 'bold',
-      }
 })
 
 
@@ -70,9 +84,9 @@ const FAQ = () => {
 
     return (
         <div className={classes.root}>
-        <div className="faq-section">
-            <Box className={classes.header}>F . A . Q</Box>
-            <div className="faq-list">
+        <div className="faq-section" >
+            <Box className={classes.header} data-aos="zoom=in">F . A . Q</Box>
+            <div className="faq-list" data-aos="fade-up">
                 {faqs.map((faq, index) => (
                     <FaqList
                         faq={faq}

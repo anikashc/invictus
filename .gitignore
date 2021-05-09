@@ -3,14 +3,16 @@
 # dependencies
 /node_modules
 node_modules/
+_redirects
+netlify.toml
 /.pnp
 .pnp.js
 .eslintcache
 # testing
 /coverage
-
+.netlify
 # production
-/build
+build
 
 # misc
 .DS_Store

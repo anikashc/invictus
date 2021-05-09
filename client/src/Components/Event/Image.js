@@ -5,8 +5,9 @@ import eventsData from "../../Assets/EventsData";
 const useStyles = makeStyles({
     root: {
         maxWidth: 300,
-        width: "25rem",
-        height: "15rem",
+        borderRadius: "10%",
+        width: "80%",
+        height: "80%",
         objectFit: "cover",
     },
 });

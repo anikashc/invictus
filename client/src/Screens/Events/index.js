@@ -3,6 +3,10 @@ import eventData from '../../Assets/EventsData.js';
 import {Button, Grid} from '@material-ui/core';
 import EventCard from './eventCard';
 import { useStyles } from './eventStyles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const Events = () => {
 
@@ -28,28 +32,28 @@ const Events = () => {
   let toPrint;
   if (selected === 'coding') {
     toPrint = coding.map((event, index) => (
-    <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+    <Grid data-aos="fade-up" item xs={12} sm={4} md={3} key = {'grid'+index}>
       <EventCard event = {event} key = {'card'+index}/>
     </Grid>
     ))
   }
   else if (selected === 'electronics') {
     toPrint = electronics.map((event, index) => (
-      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+      <Grid  data-aos="fade-up"  item xs={12} sm={4} md={3} key = {'grid'+index}>
         <EventCard event = {event} key = {'card'+index}/>
       </Grid>
     ))
   }
   else if (selected === 'games') {
     toPrint = games.map((event, index) => (
-      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+      <Grid  data-aos="fade-up" item xs={12} sm={4} md={3} key = {'grid'+index}>
         <EventCard event = {event} key = {'card'+index}/>
       </Grid>
     ))
   }
   else if (selected === 'informative') {
     toPrint = informative.map((event, index) => (
-      <Grid item xs={12} sm={4} md={3} key = {'grid'+index}>
+      <Grid  data-aos="fade-up" item xs={12} sm={4} md={3} key = {'grid'+index}>
         <EventCard event = {event} key = {'card'+index}/>
       </Grid>
     ))
@@ -57,7 +61,7 @@ const Events = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container align = 'center' justify = 'center'  className={classes.buttons}>
+      <Grid container data-aos="flip-up" align = 'center' justify = 'center'  className={classes.buttons}>
         <Grid item xs={12} sm={3}>
           <Button
           className = {classes.button}

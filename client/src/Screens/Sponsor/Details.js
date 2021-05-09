@@ -8,15 +8,24 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import SponsorData from './SponsorData'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
+
 
 const useStyles = makeStyles(theme => ({
+  root:{ 
+    overflowX: 'hidden',
+  },
   icon: {
     marginRight: theme.spacing(2),
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(16, 0, 6),
-    color: '#ffffff'
+    color: '#ffffff',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -48,10 +57,11 @@ export default function Album(props) {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
-        <div className={classes.heroContent} 
+        <div className={classes.root}>
+        <div className={classes.heroContent} data-aos="fade-up"
         style={{backgroundColor:"transparent", position:"relative"}}>
-          <Container maxWidth="xs">
-            <Typography component="h1" variant="h2" align="center" color="white" gutterBottom>
+          <Container maxWidth="md" >
+            <Typography component="h2" variant="h2" align="center" color="white" gutterBottom>
               Sponsor Us
             </Typography>
             <Typography variant="h5" align="center"  paragraph>
@@ -79,7 +89,7 @@ export default function Album(props) {
           <Grid container spacing={4}>
             {SponsorData.map(sponsor => (
               <Grid item key={sponsor} xs={12} sm={6} md={4}>
-                <Card className={classes.card} key={sponsor.id}>
+                <Card data-aos="zoom-out"  className={classes.card} key={sponsor.id}>
                   <CardMedia
                     className={classes.cardMedia}
                     image={sponsor.imgsrc}
@@ -91,6 +101,8 @@ export default function Album(props) {
           </Grid>
         </Container>
       
+        </div>
+        
     </React.Fragment>
   );
 }

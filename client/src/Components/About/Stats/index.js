@@ -3,44 +3,41 @@ import React from 'react'
 import ParticipantStats from './ParticipantsStats'
 import EventStats from './EventStats'
 import Box from '@material-ui/core/Box';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const useStyles= makeStyles({
     root:{
-        height: '50vh',
+        height: '100%',
         width: '100%',
+        padding: '20px',
+        display:'flex',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
     },
-    header:{  
+    subtext: {
       paddingTop: '20px',  
-    color: '#FFFFFF', 
-    fontSize: '2.5rem',
-    display: 'flex',
-    justifyContent: 'center',
-    fontFamily: 'Rajdhani',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+      color: '#D66496', 
+      fontSize: '2rem',
+      display: 'flex',
+      justifyContent: 'center',
+      fontFamily: 'Rajdhani',
+      fontStyle: 'normal',
+      fontWeight: '700',
     }
 })
 
 const Stats = () => {
-    // const { countUp, start, reset} = useCountUp({
-    //   start: 0,
-    //   end: 2000,
-    //   delay: 0,
-    //   duration: 5,
-    //   onReset: () => {
-    //     start()
-    //   },
-    // });
     const classes= useStyles();
     return (
         <div className={classes.root}>
           
-          <Box className={classes.header}>PREVIOUS STATS</Box>
-
-          
-          <Box className={classes.header}>
+          <Box className={classes.subtext}>
             <div><ParticipantStats /></div> 
           </Box>
-          <Box className={classes.header}>
+          <Box className={classes.subtext}>
             <div><EventStats /></div> 
           </Box>
         </div>
