@@ -12,11 +12,10 @@ const useStyles= makeStyles({
         height: '100%',
         width: '100%',
         padding: '10px',
-        background: '#FFFFFF',
     },
     header:{  
     paddingTop: '20px',  
-    color: '#1B1430', 
+    color: '#FFFFFF', 
     display: 'flex',
     justifyContent: 'center',
     fontFamily: 'Rajdhani',
