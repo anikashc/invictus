@@ -1,5 +1,6 @@
 import React from 'react'
 import eventData from '../../Assets/EventsData.js';
+import EventMenu from './eventMenu';
 import {Button, Grid, Box} from '@material-ui/core';
 import EventCard from './eventCard';
 import { useStyles } from './eventStyles';
@@ -62,6 +63,7 @@ const Events = () => {
   return (
     <div className={classes.root}>
       <Box className={classes.header} data-aos="zoom-in">EVENTS</Box>
+      
       <Grid container data-aos="flip-up" align = 'center' justify = 'center'  className={classes.buttons}>
         <Grid item xs={12} sm={3}>
           <Button
@@ -102,7 +104,13 @@ const Events = () => {
             Informative
           </Button>
         </Grid>
-        
+
+      </Grid>
+      
+      <Grid container align = 'center' justify = 'center'>
+        <Grid item xs={12} className = {classes.menu}>
+          <EventMenu onClick = {setSelected}/>
+        </Grid>
       </Grid>
 
       <Grid container align = 'center'>
