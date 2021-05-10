@@ -86,7 +86,7 @@ const Home = () => {
               </video>
               <div className="typewriter">
                 <div className={classes.textContainer}>
-                <h1>Invictus '21</h1>
+                <h1>Invictus'21</h1>
                 <h2>Coming Soon...</h2>
                 </div>
                 <Timer />

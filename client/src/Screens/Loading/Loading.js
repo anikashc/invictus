@@ -65,7 +65,7 @@ const Loading = () => {
               
               <div className="typewriter" >
                 
-                <h1 className={classes.textAnimation}> Invictus '21</h1>
+                <h1 className={classes.textAnimation}> Invictus'21</h1>
                 <LottieAnimation className={classes.animation} lotti={loading} ></LottieAnimation>
                 
               </div>
