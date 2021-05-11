@@ -15,121 +15,89 @@ import { Typography } from '@material-ui/core';
 import './temp.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const {REACT_APP_CLIENT_ID, REACT_APP_API_KEY} = process.env;
 
 AOS.init();
-
-var gapi = window.gapi
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
-var SCOPES = "https://www.googleapis.com/auth/calendar.events"
-
-const handleClick = (i) => {
-  gapi.load('client:auth2', () => {
-    console.log('Loaded Client')
-    gapi.client.init({
-      clientId: REACT_APP_CLIENT_ID,
-      apiKey: REACT_APP_API_KEY,
-      discoveryDocs: DISCOVERY_DOCS,
-      scope: SCOPES,
-    })
-
-    gapi.client.load('calendar', 'v3', () => console.log('Loaded Calendar'))
-    gapi.auth2.getAuthInstance().signIn()
-    .then(() => {
-      
-      var event = [
-      {
-        'summary': 'Coding Event 1',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-06T15:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-06T17:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '4',
-      },
-      {
-        'summary': 'Coding Event 2',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-07T14:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-07T16:30:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '4',
-      },
-      {
-        'summary': 'Gaming Event 1',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-07T12:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-07T13:30:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '1',
-      },
-      {
-        'summary': 'Gaming Event 2',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-08T13:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-08T15:30:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '1',
-      },
-      {
-        'summary': 'Robotics Event 1',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-06T12:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-06T13:30:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '2',
-      },
-      {
-        'summary': 'Robotics Event 2',
-        'description': 'Hello',
-        'start': {
-          'dateTime': '2021-05-08T16:00:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'end': {
-          'dateTime': '2021-05-08T17:30:00+05:30',
-          'timeZone': 'Asia/Kolkata'
-        },
-        'colorId': '2',
-      },
-    ]
-
-      var request = gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': event[i],
-      })
-
-      request.execute(event => {
-        console.log(event)
-        window.open(event.htmlLink)
-      })
-    })
-  })
-}
+  
+/*var event = [
+  {
+    'summary': 'Coding Event 1',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-06T15:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-06T17:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '4',
+  },
+  {
+    'summary': 'Coding Event 2',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-07T14:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-07T16:30:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '4',
+  },
+  {
+    'summary': 'Gaming Event 1',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-07T12:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-07T13:30:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '1',
+  },
+  {
+    'summary': 'Gaming Event 2',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-08T13:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-08T15:30:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '1',
+  },
+  {
+    'summary': 'Robotics Event 1',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-06T12:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-06T13:30:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '2',
+  },
+  {
+    'summary': 'Robotics Event 2',
+    'description': 'Hello',
+    'start': {
+      'dateTime': '2021-05-08T16:00:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'end': {
+      'dateTime': '2021-05-08T17:30:00+05:30',
+      'timeZone': 'Asia/Kolkata'
+    },
+    'colorId': '2',
+  },
+]*/
 
 function App () {
   const schedulerData = [
@@ -191,12 +159,12 @@ function App () {
       fieldName: 'button',
       title: 'Button',
       instances: [
-        { id: 'Coding Event 1', text: <Button variant="contained" color='primary' onClick={() => handleClick(0)}>Add event to Google Calendar</Button>, color: '#E67C73'},
-        { id: 'Coding Event 2', text: <Button variant="contained" color='primary' onClick={() => handleClick(1)}>Add event to Google Calendar</Button>, color: '#E67C73'},
-        { id: 'Gaming Event 1', text: <Button variant="contained" color='primary' onClick={() => handleClick(2)}>Add event to Google Calendar</Button>, color: '#7986CB'},
-        { id: 'Gaming Event 2', text: <Button variant="contained" color='primary' onClick={() => handleClick(3)}>Add event to Google Calendar</Button>, color: '#7986CB'},
-        { id: 'Robotics Event 1', text: <Button variant="contained" color='primary' onClick={() => handleClick(4)}>Add event to Google Calendar</Button>, color: '#33B679'},
-        { id: 'Robotics Event 2', text: <Button variant="contained" color='primary' onClick={() => handleClick(5)}>Add event to Google Calendar</Button>, color: '#33B679'},
+        { id: 'Coding Event 1', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=NGdocjNoY2xpZDBtYXVscHVtM3Y5Y2FrdDMgaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#E67C73'},
+        { id: 'Coding Event 2', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=MDdkbnBxNzNucHFoczM3NWRuazVkMThrZ2ogaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#E67C73'},
+        { id: 'Gaming Event 1', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=MDE1MXBobzlkb2ZydGtkN3M2anFqaWpjbzggaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#7986CB'},
+        { id: 'Gaming Event 2', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=MzJvOG1ta2p1ZHRoZ25vYmI3azM2NmJ1cGwgaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#7986CB'},
+        { id: 'Robotics Event 1', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=NHAxN3Q3OWkxOHF1Z2tydDU3NGtjNmY3MmIgaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#33B679'},
+        { id: 'Robotics Event 2', text: <Button variant="contained" color='primary' onClick={() => window.open("https://calendar.google.com/event?action=TEMPLATE&tmeid=M3AxanBnbzNiMzBua2ZqbnVkNTRkY2EyamggaW52aWN0dXMyazIxZHR1QG0&tmsrc=invictus2k21dtu%40gmail.com")}>Add event to Google Calendar</Button>, color: '#33B679'},
       ],
     }
   ];
@@ -214,6 +182,13 @@ function App () {
           gutterBottom
         >
           SCHEDULE
+        </Typography>
+        <Typography
+          className = {classes.caption}
+          variant='body1'
+          gutterBottom
+        >
+          (Click on an event to add it to your Google Calendar)
         </Typography>
       </Grid>
 

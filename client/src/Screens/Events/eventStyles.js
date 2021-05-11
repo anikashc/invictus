@@ -49,7 +49,14 @@ export const useStyles = makeStyles({
       backgroundColor: '#DB4789'
     },
     '@media (max-width:599px)': {//mobile view
-      width: '200px',
+      display: 'none'
+    },
+  },
+  menu: {
+    marginBottom: '40px',
+    fontFamily: 'Rajdhani',
+    '@media (min-width:599px)': {//mobile view
+      display: 'none',
     },
   }
 });

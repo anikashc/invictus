@@ -37,10 +37,30 @@ export const useStyles = makeStyles({
     '@media (max-width: 1024px)':{
     fontSize: '3rem',    
     lineHeight:'15px',
-  },
+    },
   '@media (max-width: 768px)':{
     fontSize: '2.5rem',    
     lineHeight:'10px',
+    },
+  },caption:{
+    paddingTop: '30px',
+    color: '#FFFFFF', 
+    fontSize: '1.5rem',
+    textAlign: 'center',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    '@media (max-width: 1130px)':{
+      fontSize: '1.3125rem',    
+      lineHeight:'20px',
+    },
+    '@media (max-width: 1024px)':{
+    fontSize: '1.125rem',    
+    lineHeight:'15px',
+    },
+  '@media (max-width: 768px)':{
+    fontSize: '0.9375rem',    
+    lineHeight:'10px',
+    },
   },
-},
 });
