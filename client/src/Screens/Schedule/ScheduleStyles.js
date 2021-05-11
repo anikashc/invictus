@@ -51,15 +51,15 @@ export const useStyles = makeStyles({
     fontStyle: 'normal',
     fontWeight: 'bold',
     '@media (max-width: 1130px)':{
-      fontSize: '3.5rem',    
+      fontSize: '1.3125rem',    
       lineHeight:'20px',
     },
     '@media (max-width: 1024px)':{
-    fontSize: '3rem',    
+    fontSize: '1.125rem',    
     lineHeight:'15px',
     },
   '@media (max-width: 768px)':{
-    fontSize: '2.5rem',    
+    fontSize: '0.9375rem',    
     lineHeight:'10px',
     },
   },
