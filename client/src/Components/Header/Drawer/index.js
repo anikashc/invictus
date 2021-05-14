@@ -1,5 +1,5 @@
 import React from 'react';
-import {Drawer, List, Divider, IconButton, Typography, Container, ListItem}  from '@material-ui/core';
+import {Drawer, List, Modal, IconButton, Typography, Container, ListItem}  from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { useStyles } from './DrawerStyles';
 import { useHistory } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 export default function CustomDrawer(props) {
   const classes = useStyles();
   const history = useHistory();
+  const [formopen, setFormOpen] = React.useState(false);  
 
   return (
 
@@ -44,6 +45,19 @@ export default function CustomDrawer(props) {
                 
           </ListItem>
         ))}
+
+        <ListItem 
+          button  
+          key = {'itemtext'+'subscribe'}
+          onClick = {()=>props.handleFormOpen()}
+          className = {classes.itemButton}
+        >
+
+          <Typography  className = {classes.itemText}>
+            SUBSCRIBE
+          </Typography>
+              
+        </ListItem>
       </List>
 
     </Drawer>
